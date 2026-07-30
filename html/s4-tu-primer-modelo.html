@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-20260728120000PAGE04">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S4 · Tu primer modelo | Enseña a la máquina: datos, sesgos e inteligencia artificial</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de inteligencia artificial y Big Data para 3.º de ESO (Computación y Robótica): datos y metadatos, scraping, aprendizaje automático supervisado con LearningML, aprendizaje por refuerzo y reflexión sobre sesgos y ética de la IA. Reto: reconocedor de signos de la lengua de signos española.">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260728120000BD3SDA06","packageTitle":"Enseña a la máquina: datos, sesgos e inteligencia artificial","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../idevices/quick-questions/quick-questions.js"></script><link rel="stylesheet" href="../idevices/quick-questions/quick-questions.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#20260728120000PAGE04" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Inicio</a>
+</li>
+<li> <a href="../html/s1-la-ia-que-ya-usas.html" class="no-ch">S1 · La IA que ya usas</a>
+</li>
+<li> <a href="../html/s2-datos-y-metadatos.html" class="no-ch">S2 · Datos y metadatos</a>
+</li>
+<li> <a href="../html/s3-como-aprende-a-ver.html" class="no-ch">S3 · Cómo aprende a ver</a>
+</li>
+<li class="active"> <a href="../html/s4-tu-primer-modelo.html" class="active no-ch">S4 · Tu primer modelo</a>
+</li>
+<li> <a href="../html/s5-vuestros-signos.html" class="no-ch">S5 · Vuestros signos</a>
+</li>
+<li> <a href="../html/s6-entrenar-y-aprender-por-refuerzo.html" class="no-ch">S6 · Entrenar y aprender por refuerzo</a>
+</li>
+<li> <a href="../html/s7-demo-sesgos-y-etica.html" class="no-ch">S7 · Demo, sesgos y ética</a>
+</li>
+<li> <a href="../html/chuleta.html" class="no-ch">Chuleta</a>
+</li>
+<li> <a href="../html/para-ir-mas-alla.html" class="no-ch">Para ir más allá</a>
+</li>
+</ul>
+</nav><main id="20260728120000PAGE04" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">5</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Enseña a la máquina: datos, sesgos e inteligencia artificial</p></div>
+<div class="page-header"><h1 class="page-title">S4 · Tu primer modelo</h1></div>
+</header><div id="page-content-20260728120000PAGE04" class="page-content">
+<article id="20260728120000BLK004" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="20260728120000IDEV004" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;20260728120000IDEV004&quot;}">
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">De qué va esta sesión</p>
+  <p>Hoy entrenas tu primer modelo de verdad. Vas a hacerlo con un ejemplo sencillo y rápido
+  para aprender la herramienta; los signos de la LSE vienen en la S5. Al final habrás recorrido
+  las tres fases enteras y habrás visto tu modelo funcionando dentro de un programa de
+  Scratch.</p>
+</div>
+
+<h2>1. Entra en LearningML</h2>
+<p><strong>LearningML</strong> es una herramienta web gratuita, creada por Juan David Rodríguez
+García, pensada para iniciarse en el aprendizaje automático. Funciona en el navegador y
+<strong>no necesita cuenta ni registro</strong>.</p>
+
+<p>Abre <a href="https://learningml.org/lml-editor/?locale=es" target="_blank" rel="noopener">el
+editor de modelos de LearningML</a> (ese enlace ya lo abre en español; si te sale en inglés,
+busca el icono del globo terráqueo en la barra de arriba y elige <em>Español</em>).</p>
+
+<p>Verás cuatro tarjetas para elegir qué quieres que reconozca tu modelo: <strong>texto</strong>,
+<strong>imágenes</strong>, <strong>números</strong> o <strong>sonidos</strong>. Pulsa
+<strong>«Reconocimiento de imágenes»</strong>.</p>
+
+<div class="marco marco-nota">
+  <p class="marco-titulo">La pantalla tiene tres zonas, y son las tres fases de la S3</p>
+  <table class="tabla-datos">
+    <thead><tr><th>Zona</th><th>Para qué</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Entrenamiento</strong></td><td>Crear las clases y meter las imágenes de ejemplo.</td></tr>
+      <tr><td><strong>Aprender</strong></td><td>Un botón: <em>«Aprender a reconocer imágenes»</em>.</td></tr>
+      <tr><td><strong>Probar</strong></td><td>Meter imágenes nuevas y ver si acierta.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<figure>
+  <img src="../content/resources/lml_editor_zonas.png" alt="Pantalla del editor de LearningML con las zonas Entrenamiento, Aprender y Probar, y dos clases creadas">
+  <figcaption>Así se ve el editor con dos clases ya creadas. Fíjate en los botones
+  <strong>Subir</strong> y <strong>Cámara</strong> dentro de cada clase.</figcaption>
+</figure>
+
+<div class="marco marco-nota">
+  <p class="marco-titulo">Dónde está el menú</p>
+  <p>Si la ventana del navegador es ancha, el menú aparece desplegado en la barra de arriba
+  (globo del idioma · <strong>Archivo</strong> · <em>Nombre del modelo</em> ·
+  <strong>Aprender LML</strong> · <strong>Basic / Avanzado</strong> · el gatito de Scratch).
+  Si la ventana es estrecha, todo eso se esconde detrás del botón <strong>☰</strong>.</p>
+</div>
+
+<h2>2. Práctica guiada: piedra, papel o tijera</h2>
+<p>Vamos a entrenar un modelo que distinga las tres jugadas de piedra-papel-tijera hechas con la
+mano. Es rápido, se ve enseguida si funciona y os prepara para los signos de la S5.</p>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">Paso a paso</p>
+  <ol>
+    <li><strong>Pon nombre al proyecto.</strong> Escribe en el cuadro
+    <em>«Nombre del modelo»</em> de la barra de arriba: <code>s4_piedra_papel_tijera</code>.
+    Ese nombre será el del archivo cuando guardes.</li>
+
+    <li><strong>Crea las clases.</strong> En la zona <em>Entrenamiento</em>, escribe
+    <code>piedra</code> en el cuadro <em>«Nombre de nueva clase»</em> y pulsa
+    <strong>«Añadir nueva clase»</strong>. Repite con <code>papel</code> y <code>tijera</code>.
+    Aparecerán tres contenedores vacíos.</li>
+
+    <li><strong>Consigue las imágenes.</strong> Cada clase tiene dos botones para añadirlas:
+      <ul>
+        <li><strong>«Cámara»</strong> — si el ordenador tiene webcam. Se activa la cámara: haz
+        el gesto y pulsa <strong>«Captura»</strong> unas <strong>15 veces</strong>, moviendo la
+        mano un poco entre foto y foto (más cerca, más lejos, girada, la otra mano). Al acabar,
+        <strong>«Cerrar»</strong>.</li>
+        <li><strong>«Subir»</strong> — si no hay webcam. Se abre el explorador de archivos y
+        eliges las fotos que ya tengas hechas. Puedes seleccionar <strong>varias a la vez</strong>
+        manteniendo pulsada la tecla <em>Ctrl</em> (o <em>Mayúsculas</em> para un bloque
+        seguido).</li>
+      </ul>
+    </li>
+
+    <li>Haz lo mismo con <code>papel</code> y <code>tijera</code>. Unas 15 imágenes por clase.</li>
+
+    <li><strong>Entrena.</strong> En la zona <em>Aprender</em>, pulsa
+    <strong>«Aprender a reconocer imágenes»</strong>. Saldrá una ventana con una barra de
+    progreso. Cuanto más grande sea tu conjunto de imágenes, más tardará.</li>
+
+    <li><strong>Prueba.</strong> En la zona <em>Probar</em>, mete una imagen
+    <strong>nueva</strong> con <strong>«Tomar desde la cámara»</strong> (o con
+    <strong>«Subir imágenes»</strong> si no tienes webcam) y mira el resultado: el modelo te
+    dirá el porcentaje de <strong>confianza</strong> de cada clase.</li>
+
+    <li><strong>Guarda.</strong> <strong>Archivo</strong> →
+    <em>«Guardar conjunto de datos en tu ordenador»</em>. Se descargará
+    <code>s4_piedra_papel_tijera.json</code>.</li>
+  </ol>
+</div>
+
+<figure>
+  <img src="../content/resources/lml_menu_archivo.png" alt="Menú Archivo desplegado con las opciones Nuevo, Subir conjunto de datos, Guardar conjunto de datos y Guardar modelo">
+  <figcaption>El menú <strong>Archivo</strong>. Las dos opciones que más vas a usar son
+  «Guardar conjunto de datos en tu ordenador» y «Subir conjunto de datos desde tu
+  ordenador».</figcaption>
+</figure>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Si tu ordenador no tiene webcam</p>
+  <p>No pasa nada: <strong>puedes hacer toda la unidad sin cámara</strong>. Solo cambia de dónde
+  salen las imágenes.</p>
+  <ol>
+    <li><strong>Haz las fotos con el móvil.</strong> Los mismos gestos, con el mismo cuidado:
+    fondo liso, buena luz, la mano bien centrada.</li>
+    <li><strong>Súbelas a la tarea de Classroom</strong> desde el propio móvil. Ojo: a la tarea
+    de la asignatura, con tu cuenta del centro. No hace falta ninguna app ni ninguna cuenta
+    nueva.</li>
+    <li><strong>Descárgalas en el ordenador del aula</strong> desde Classroom.</li>
+    <li>En LearningML, usa el botón <strong>«Subir»</strong> de cada clase en vez de «Cámara».</li>
+  </ol>
+  <p>Para la zona <em>Probar</em>, el equivalente es <strong>«Subir imágenes»</strong> en lugar
+  de «Tomar desde la cámara». Guarda siempre unas cuantas fotos <strong>sin subirlas a ninguna
+  clase</strong>: son las que usarás para probar.</p>
+</div>
+
+<div class="marco marco-formula">
+  <p class="marco-titulo">Cómo leer la confianza</p>
+  <p>El modelo nunca dice «esto es papel». Dice «estoy un 87&nbsp;% seguro de que es papel».
+  Interpreta así el resultado:</p>
+  <ul>
+    <li><strong>Por encima del 80&nbsp;%:</strong> el modelo lo tiene claro.</li>
+    <li><strong>Entre el 60&nbsp;% y el 80&nbsp;%:</strong> va justo. Añade más imágenes y vuelve a entrenar.</li>
+    <li><strong>Por debajo del 60&nbsp;%:</strong> está adivinando. Faltan ejemplos o son demasiado parecidos entre sí.</li>
+  </ul>
+  <p>Y si el modelo acierta con las tres clases pero siempre con la misma persona y el mismo
+  fondo, todavía no sabes si funciona: <strong>pídele a alguien de otro equipo que lo
+  pruebe</strong>.</p>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Actividad 7 — Rompe tu propio modelo</p>
+  <p>Con el modelo ya entrenado, probadlo en estas cuatro situaciones y anotad el porcentaje de
+  confianza en cada una:</p>
+  <ol>
+    <li>La misma persona, mismo sitio, mismo gesto que al entrenar.</li>
+    <li>Otra persona del equipo haciendo el mismo gesto.</li>
+    <li>La misma persona pero con la mano más lejos de la cámara.</li>
+    <li>La misma persona delante de un fondo distinto (una pared, una mochila…).</li>
+  </ol>
+  <p>¿En cuál falla más? ¿Qué le añadiríais al conjunto de imágenes para arreglarlo? Apuntadlo:
+  os va a servir literalmente en la sesión siguiente.</p>
+</div>
+
+<h2>3. Sacar el modelo a Scratch</h2>
+<p>Un modelo solo no hace nada; hay que usarlo dentro de un programa. LearningML trae su propia
+versión de Scratch con bloques extra para eso.</p>
+
+<figure><img src="../content/resources/proceso_completo_scratch.png" alt="Esquema: datos, LearningML, modelo y programa en Scratch"></figure>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">Del modelo al programa</p>
+  <ol>
+    <li>Con el modelo ya entrenado, pulsa en el editor el <strong>botón del gatito de
+    Scratch</strong>. Se abrirá
+    <a href="https://learningml.org/lml-scratch/?locale=es" target="_blank" rel="noopener">el
+    editor de programación</a> en otra pestaña, <strong>con tu modelo ya cargado</strong>.</li>
+    <li>En la lista de categorías de bloques (columna de la izquierda), <strong>al final del
+    todo</strong>, verás una nueva: <strong>learningml</strong>.</li>
+    <li>Comprueba que el modelo correcto está cargado con el menú <strong>«Model Info»</strong>:
+    te dirá el nombre, el tipo de dato y las clases que reconoce.</li>
+  </ol>
+</div>
+
+<figure>
+  <img src="../content/resources/lml_scratch_categoria.png" alt="Barra superior del editor de Scratch de LearningML y columna de categorías con learningml marcada al final">
+  <figcaption>Arriba, el menú <strong>Archivo</strong> y <strong>Model Info</strong>. A la
+  izquierda, la categoría <strong>learningml</strong>, la última de la lista.</figcaption>
+</figure>
+
+<div class="marco marco-nota">
+  <p class="marco-titulo">Ojo: los bloques de learningml están en inglés</p>
+  <p>El resto de Scratch está en español, pero los bloques de la categoría
+  <strong>learningml</strong> aún no están traducidos. Estos son los dos que vas a usar:</p>
+  <table class="tabla-datos">
+    <thead><tr><th>Bloque</th><th>Qué hace</th></tr></thead>
+    <tbody>
+      <tr><td><code>Classify item [ ]</code></td><td>Devuelve <strong>el nombre de la clase</strong> más probable de lo que le pases.</td></tr>
+      <tr><td><code>Confidence for item [ ]</code></td><td>Devuelve el <strong>porcentaje de confianza</strong> de esa respuesta.</td></tr>
+      <tr><td><code>Turn video [ON]</code></td><td>Enciende la cámara (<code>FLIPPED</code> = modo espejo). Solo si tienes webcam.</td></tr>
+      <tr><td><code>Video Image</code></td><td>La imagen que está viendo la cámara ahora mismo. Es lo que le pasarás a <code>Classify item</code>.</td></tr>
+      <tr><td><code>Current costume</code></td><td>El disfraz que lleva puesto el objeto. Es la alternativa a <code>Video Image</code> <strong>cuando no hay cámara</strong>.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">Tu primer programa que ve</p>
+  <p>Monta este programa. Es cortísimo:</p>
+  <ol>
+    <li><code>al hacer clic en 🏳</code> (Eventos)</li>
+    <li><code>Turn video [ON]</code></li>
+    <li><code>por siempre</code> (Control), y dentro:</li>
+    <li>&nbsp;&nbsp;&nbsp;<code>decir (unir (Classify item (Video Image)) (Confidence for item (Video Image)))</code></li>
+    <li>&nbsp;&nbsp;&nbsp;<code>esperar 1 segundos</code></li>
+  </ol>
+  <p>Dale a la bandera verde y ponte delante de la cámara haciendo los gestos. El gato irá
+  diciendo qué ve y con cuánta seguridad.</p>
+  <p><strong>Guarda el proyecto:</strong> <em>Archivo → Guardar en tu ordenador</em>, y ponle de
+  nombre <code>s4_piedra_papel_tijera.sb3</code>.</p>
+</div>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Sin webcam: clasificar disfraces en vez de vídeo</p>
+  <p>Los bloques <code>Turn video</code> y <code>Video Image</code> necesitan cámara. Si no la
+  tienes, el modelo clasifica <strong>los disfraces del objeto</strong>, que es una forma de
+  trabajar prevista por la propia herramienta:</p>
+  <ol>
+    <li>Pestaña <strong>Disfraces</strong> (arriba a la izquierda) → botón de
+    <strong>subir un disfraz</strong> → añade unas cuantas de tus fotos de prueba. Cada foto
+    será un disfraz.</li>
+    <li>Vuelve a <strong>Código</strong> y monta:
+      <ul>
+        <li><code>al hacer clic en 🏳</code></li>
+        <li><code>por siempre</code>:
+          <ul>
+            <li><code>siguiente disfraz</code> (Apariencia)</li>
+            <li><code>decir (unir (Classify item (Current costume)) (Confidence for item (Current costume)))</code></li>
+            <li><code>esperar 2 segundos</code></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <p>El objeto irá pasando tus fotos una a una y diciendo qué ve en cada una. Se ve menos
+  espectacular que en directo, pero <strong>demuestra exactamente lo mismo</strong>: que el
+  modelo clasifica imágenes que no había visto al entrenar.</p>
+  <p><code>Current costume</code> está en la categoría <strong>learningml</strong>, junto a
+  <code>Video Image</code>.</p>
+</div>
+
+<div class="marco marco-formula">
+  <p class="marco-titulo">Un detalle que os va a salvar</p>
+  <p>El archivo <code>.sb3</code> de LearningML Scratch <strong>guarda dentro el modelo</strong>,
+  no solo el código. Así que si guardáis el <code>.sb3</code>, al volver a abrirlo tendréis el
+  programa <em>y</em> el modelo funcionando, sin repetir el entrenamiento.</p>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Entrega de la sesión</p>
+  <p>Subid a la tarea del reto en <strong>Google Classroom</strong> los dos archivos:
+  <code>s4_piedra_papel_tijera.json</code> y <code>s4_piedra_papel_tijera.sb3</code>.
+  Sin nombres ni apellidos en los archivos.</p>
+</div>
+</div>
+</div>
+</article><article id="block-ms7aqqz5-m7ptwdjey" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Test</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1785402822928-rbnp9umjl" class="idevice_node quick-questions" data-idevice-path="../idevices/quick-questions/" data-idevice-type="quick-questions">
+<div class="quext-IDevice"><div class="game-evaluation-ids js-hidden" data-id="idevice-1785402822928-rbnp9umjl" data-evaluationb="false" data-evaluationid="f96bc37c-5aaf-40e4-af65-a544218a46a6"></div><div class="quext-instructions QXTP-instructions"><p>Elige la respuesta correcta</p></div><div class="quext-version js-hidden">2</div><div class="quext-feedback-game"></div><div class="quext-DataGame js-hidden">%E9%B0%F3%E1%FB%F5%FC%F3%E6%E7%E0%F3%B0%A8%B0%B0%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%E7%E6%FA%FD%E0%C4%FB%F6%F7%FD%B0%A8%B0%B0%BE%B0%E6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B0%C3%E7%D7%EA%E6%B0%BE%B0%F7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%FB%F6%C4%FB%F6%F7%FD%B0%A8%B0%B0%BE%B0%E1%E6%F3%E0%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%D7%EA%F7%B0%A8%B0%B7%A1%D1%E2%B7%A1%D7%D7%FE%FB%F5%F7%B7%A0%A2%FE%F3%B7%A0%A2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B7%A0%A2%F1%FD%E0%E0%F7%F1%E6%F3%B7%A1%D1%BD%E2%B7%A1%D7%B0%BE%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%B0%A8%B0%D7%FE%FB%F8%F3%B2%FE%F3%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B2%F1%FD%E0%E0%F7%F1%E6%F3%B2%B0%BE%B0%E1%FA%FD%E5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%FD%E2%E6%FB%FD%FC%E1%C0%F3%FF%F6%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%F3%FC%E1%E5%F7%E0%E1%C0%F3%FF%F6%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%E1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%E6%FB%FF%F7%C1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A1%BE%B0%E7%E1%F7%DE%FB%E4%F7%E1%B0%A8%E6%E0%E7%F7%BE%B0%FC%E7%FF%F0%F7%E0%DE%FB%E4%F7%E1%B0%A8%A1%BE%B0%FB%E6%FB%FC%F7%E0%F3%E0%EB%B0%A8%E9%B0%E1%FA%FD%E5%D1%FE%E7%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%F1%FE%E7%F7%D5%F3%FF%F7%B0%A8%B0%B0%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F5%F7%D1%FE%E7%F7%B0%A8%A6%A2%BE%B0%E1%FA%FD%E5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%F4%F3%FE%E1%F7%BE%B0%F1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%B0%BE%B0%FF%F7%E1%E1%F3%F5%F7%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%B0%EF%BE%B0%E3%E7%F7%E1%E6%FB%FD%FC%E1%D5%F3%FF%F7%B0%A8%C9%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%D7%FE%B2%FF%FD%F6%F7%FE%FD%B2%E0%F7%E1%E2%FD%FC%F6%F7%B2%F1%FD%FC%B2%E7%FC%B2%A6%A7%B2%B7%B2%F6%F7%B2%F1%FD%FC%F4%FB%F3%FC%E8%F3%BC%B2-%C3%E7%7B%B2%FA%F3%F1%F7%E1%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%D6%F3%E0%FE%FD%B2%E2%FD%E0%B2%F0%E7%F7%FC%FD%B0%BE%B0%D3c%F3%F6%FB%E0%B2%FFs%E1%B2%FB%FFs%F5%F7%FC%F7%E1%B2%EB%B2%E4%FD%FE%E4%F7%E0%B2%F3%B2%F7%FC%E6%E0%F7%FC%F3%E0%B0%BE%B0%D1%F3%FF%F0%FB%F3%E0%B2%F6%F7%B2%E1%FB%F5%FC%FD%B0%BE%B0%C0%F7%FB%FC%FB%F1%FB%F3%E0%B2%F7%FE%B2%F7%FC%E6%E0%F7%FC%F3%FF%FB%F7%FC%E6%FD%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A3%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%C2%FD%E0%B2%F6%F7%F0%F3%F8%FD%B2%F6%F7%FE%B2%A4%A2%B2%B7%B2%F7%E1%E6s%B2%E2%E0s%F1%E6%FB%F1%F3%FF%F7%FC%E6%F7%B2%F3%F6%FB%E4%FB%FC%F3%FC%F6%FD%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%C7%FC%B2%A6%A7%B2%B7%B2%FC%FD%B2%F7%E1%B2%E7%FC%F3%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B2%F4%FB%F3%F0%FE%F7%A8%B2%FE%F7%B2%F4%F3%FE%E6%F3%FC%B2%F7%F8%F7%FF%E2%FE%FD%E1%BC%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%DA%F3%E1%B2%F3c%F3%F6%FB%F6%FD%B2%A3%A2%B2%FB%FFs%F5%F7%FC%F7%E1%B2%FC%E7%F7%E4%F3%E1%BC%B2-%D7%FE%B2%FF%FD%F6%F7%FE%FD%B2%FF%F7%F8%FD%E0%F3%B2%E1%FD%FE%FD%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%C1%7F%BE%B2%F3%FE%B2%FF%FD%FF%F7%FC%E6%FD%B0%BE%B0%DC%FD%A8%B2%FA%F3%EB%B2%E3%E7%F7%B2%E4%FD%FE%E4%F7%E0%B2%F3%B2%E2%E7%FE%E1%F3%E0%B29%D3%E2%E0%F7%FC%F6%F7%E0%B2%F3%B2%E0%F7%F1%FD%FC%FD%F1%F7%E0%B2%FB%FFs%F5%F7%FC%F7%E1%29%B0%BE%B0%C1%FD%FE%FD%B2%E1%FB%B2%F5%E7%F3%E0%F6%F3%E1%B0%BE%B0%C1%FD%FE%FD%B2%F1%FD%FC%B2%FE%F3%B2%F1s%FF%F3%E0%F3%B2%F7%FC%F1%F7%FC%F6%FB%F6%F3%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A3%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%D1%FD%E0%E0%F7%F1%E6%FD%A8%B2%F7%FE%B2%FF%FD%F6%F7%FE%FD%B2%E1%F7%B2%F1%FD%FC%E1%E6%E0%E7%EB%F7%B2%F1%E7%F3%FC%F6%FD%B2%FE%FD%B2%E2%FB%F6%F7%E1%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%D3c%F3%F6%FB%E0%B2%FB%FFs%F5%F7%FC%F7%E1%B2%F1%F3%FF%F0%FB%F3%B2%F7%FE%B2%F1%FD%FC%F8%E7%FC%E6%FD%B2%F6%F7%B2%F6%F3%E6%FD%E1%BE%B2%FC%FD%B2%F7%FE%B2%FF%FD%F6%F7%FE%FD%BC%B2%DA%F3%EB%B2%E3%E7%F7%B2%E0%F7%F7%FC%E6%E0%F7%FC%F3%E0%BC%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%D1%FB%F7%E0%E0%F3%E1%B2%F7%FE%B2%FC%F3%E4%F7%F5%F3%F6%FD%E0%B2%E1%FB%FC%B2%F5%E7%F3%E0%F6%F3%E0%BC%B2-%C3%E7%7B%B2%E2%F3%E1%F3%B2%F1%FD%FC%B2%E6%E7%E1%B2%FB%FFs%F5%F7%FC%F7%E1%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%C1%F7%B2%F5%E7%F3%E0%F6%F3%FC%B2%F7%FC%B2%E6%E7%B2%F1%E7%F7%FC%E6%F3%B0%BE%B0%C1%F7%B2%E2%FB%F7%E0%F6%F7%FC%B0%BE%B0%C1%F7%B2%F5%E7%F3%E0%F6%F3%FC%B2%F7%FC%B2%D1%FE%F3%E1%E1%E0%FD%FD%FF%B0%BE%B0%C1%F7%B2%E3%E7%F7%F6%F3%FC%B2%F7%FC%B2%FE%F3%B2%F1s%FF%F3%E0%F3%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A3%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%C2%FD%E0%B2%F7%E1%FD%B2%FA%F3%EB%B2%E3%E7%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%F7%FE%B2%BC%F8%E1%FD%FC%B2%EB%B2%E1%E7%F0%FB%E0%FE%FD%B2%F3%B2%D1%FE%F3%E1%E1%E0%FD%FD%FF%B2%F1%F3%F6%F3%B2%E1%F7%E1%FBa%FC%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%DE%F7%F3%E0%FC%FB%FC%F5%DF%DE%B2%F4%E7%FC%F1%FB%FD%FC%F3%B2%E1%FB%FC%B2%F1%E7%F7%FC%E6%F3%A8%B2%FC%FD%B2%F5%E7%F3%E0%F6%F3%B2%FC%F3%F6%F3%B2%E2%FD%E0%B2%E1%E7%B2%F1%E7%F7%FC%E6%F3%BC%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%C3%E7%7B%B2%F0%FE%FD%E3%E7%F7%B2%E6%F7%B2%F6%FB%F1%F7%B2%E3%E7%7B%B2%E1%FB%F5%FC%FD%B2%FA%F3%B2%E4%FB%E1%E6%FD%B2%FE%F3%B2%F1s%FF%F3%E0%F3%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%D1%FD%FC%F4%FB%F6%F7%FC%F1%F7%B2%F4%FD%E0%B2%FB%E6%F7%FF%B0%BE%B0%D1%FE%F3%E1%E1%FB%F4%EB%B2%FB%E6%F7%FF%B0%BE%B0%C6%E7%E0%FC%B2%E4%FB%F6%F7%FD%B2%DD%DC%B0%BE%B0%C4%FB%F6%F7%FD%B2%DB%FF%F3%F5%F7%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A3%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%C1%7F%A8%B2%F1%FE%F3%E1%E1%FB%F4%EB%B2%AF%B2%F1%FE%F3%E1%FB%F4%FB%F1%F3%E0%BE%B2%F6%F7%E4%E7%F7%FE%E4%F7%B2%F7%FE%B2%FC%FD%FF%F0%E0%F7%B2%F6%F7%B2%FE%F3%B2%F1%FE%F3%E1%F7%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%D1%FD%FC%F4%FB%F6%F7%FC%F1%F7%B2%F6%F3%B2%F7%FE%B2%E2%FD%E0%F1%F7%FC%E6%F3%F8%F7%A9%B2%C4%FB%F6%F7%FD%B2%DB%FF%F3%F5%F7%B2%F7%E1%B2%FE%F3%B2%FB%FF%F3%F5%F7%FC%BC%B2%D7%FE%B2%E3%E7%F7%B2%F1%FE%F3%E1%FB%F4%FB%F1%F3%B2%F7%E1%B2%D1%FE%F3%E1%E1%FB%F4%EB%B2%FB%E6%F7%FF%BC%B0%EF%CF%BE%B0%FB%E1%C1%F1%FD%E0%FF%B0%A8%A2%BE%B0%E6%F7%EA%E6%D0%E7%E6%E6%FD%FC%C1%F1%FD%E0%FF%B0%A8%B0%D5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%E0%F7%E2%F7%F3%E6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%E6%E0%E7%F7%BE%B0%E5%F7%FB%F5%FA%E6%F7%F6%B0%A8%A3%A2%A2%BE%B0%E6%FB%E6%FE%F7%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%E6%F7%EA%E6%D3%F4%E6%F7%E0%B0%A8%B0%B0%BE%B0%E6%F7%EA%E6%D4%F7%F7%F6%D0%F3%F1%F9%B0%A8%B0%B0%BE%B0%F5%F3%FF%F7%DF%FD%F6%F7%B0%A8%A3%BE%B0%F4%F7%F7%F6%D0%F3%F1%F9%B0%A8%F4%F3%FE%E1%F7%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%D4%D0%B0%A8%A3%A2%A2%BE%B0%E4%F7%E0%E1%FB%FD%FC%B0%A8%A0%BE%B0%F1%E7%E1%E6%FD%FF%DF%F7%E1%E1%F3%F5%F7%E1%B0%A8%E6%E0%E7%F7%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%A3%A2%A2%BE%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%B0%A8%F4%F3%FE%E1%F7%BE%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%DB%D6%B0%A8%B0%F4%AB%A4%F0%F1%A1%A5%F1%BF%A7%F3%F3%F4%BF%A6%A2%F7%A6%BF%F3%F4%A4%A7%BF%F3%A7%A6%A6%A0%A3%AA%F3%A6%A4%F3%A4%B0%BE%B0%F5%FE%FD%F0%F3%FE%C6%FB%FF%F7%B0%A8%A2%BE%B0%FB%F6%B0%A8%B0%FB%F6%F7%E4%FB%F1%F7%BF%A3%A5%AA%A7%A6%A2%A0%AA%A0%A0%AB%A0%AA%BF%E0%F0%FC%E2%AB%E7%FF%F8%FE%B0%BE%B0%FF%E1%F5%E1%B0%A8%E9%B0%FF%E1%F5%C1%E6%F3%E0%E6%D5%F3%FF%F7%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B0%BE%B0%FF%E1%F5%C1%E7%F0%FF%FB%E6%B0%A8%B0%D7%FC%E4%FB%F3%E0%B0%BE%B0%FF%E1%F5%D1%FE%E7%F7%B0%A8%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%E2%FB%E1%E6%F3%B2%F7%E1%A8%B0%BE%B0%FF%E1%F5%DC%F7%E5%D5%F3%FF%F7%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B2%FD%E6%E0%F3%B2%E2%F3%E0%E6%FB%F6%F3%B0%BE%B0%FF%E1%F5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%D1a%F6%FB%F5%FD%B2%F6%F7%B2%F3%F1%F1%F7%E1%FD%B0%BE%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%DE%FD%FD%F9%FB%FC%F5%B0%A8%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%F7%E1%E6%F3%F0%F3%B2%F0%E7%E1%F1%F3%FC%F6%FD%B0%BE%B0%FF%E1%F5%C2%FE%F3%EB%C1%E6%F3%E0%E6%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F8%E7%F5%F3%E0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%E1%B0%A8%B0%D7%E0%E0%FD%E0%F7%E1%B0%BE%B0%FF%E1%F5%DA%FB%E6%E1%B0%A8%B0%D3%F1%FB%F7%E0%E6%FD%E1%B0%BE%B0%FF%E1%F5%C1%F1%FD%E0%F7%B0%A8%B0%C2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C5%F7%FB%F5%FA%E6%B0%A8%B0%C2%F7%E1%FD%B0%BE%B0%FF%E1%F5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%B0%DF%FB%FC%FB%FF%FB%E8%F3%E0%B0%BE%B0%FF%E1%F5%DF%F3%EA%FB%FF%FB%E8%F7%B0%A8%B0%DF%F3%EA%FB%FF%FB%E8%F3%E0%B0%BE%B0%FF%E1%F5%C6%FB%FF%F7%B0%A8%B0%C6%FB%F7%FF%E2%FD%B2%E2%FD%E0%B2%E2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B0%FF%E1%F5%DE%FB%E4%F7%B0%A8%B0%C4%FB%F6%F3%B0%BE%B0%FF%E1%F5%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B0%C2%F3%FC%E6%F3%FE%FE%F3%B2%D1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B0%FF%E1%F5%D7%EA%FB%E6%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B0%C1%F3%FE%FB%E0%B2%F6%F7%FE%B2%FF%FD%F6%FD%B2%E2%F3%FC%E6%F3%FE%FE%F3%B2%F1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B0%FF%E1%F5%DC%E7%FF%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B0%DCh%FF%F7%E0%FD%B2%F6%F7%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B0%BE%B0%FF%E1%F5%DC%FD%DB%FF%F3%F5%F7%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%B2%E1%FB%FC%B2%FB%FFs%F5%F7%FC%F7%E1%B0%BE%B0%FF%E1%F5%D1%FD%FD%FE%B0%A8%B03%D0%FB%F7%FC%B3%B0%BE%B0%FF%E1%F5%DE%FD%E1%F7%C6%B0%A8%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%A1%A1%A2%B2%E2%E7%FC%E6%FD%E1%B0%BE%B0%FF%E1%F5%DE%FD%E1%F7%DE%FB%E4%F7%B0%A8%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E7%FC%F3%B2%E4%FB%F6%F3%B0%BE%B0%FF%E1%F5%DE%FD%E1%E6%DE%FB%E4%F7%E1%B0%A8%B03%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E6%FD%F6%F3%E1%B2%E1%E7%E1%B2%E4%FB%F6%F3%E1%B3%B0%BE%B0%FF%E1%F5%D3%FE%FE%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B03%D1%FD%FF%E2%FE%F7%E6%F3%F6%F3%E1%B2%FE%F3%E1%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B3%B0%BE%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F7%E1%B0%A8%B03%D1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%D7%EA%F1%F7%FE%F7%FC%E6%F7%B3%B2%EE%B23%D5%F7%FC%FB%F3%FE%B3%B2%EE%B23%DF%E7%EB%B2%F0%FB%F7%FC%B3%B2%EE%B23%C2%F7%E0%F4%F7%F1%E6%FD%B3%B0%BE%B0%FF%E1%F5%D4%F3%FB%FE%E7%E0%F7%E1%B0%A8%B03%DC%FD%B2%F7%E0%F3%B2%F7%E1%FD%B3%B2%EE%B23%DB%FC%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DC%FD%B2%F7%E1%B2%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DE%FD%B2%E1%F7%FC%E6%FB%FF%FD%E1%B3%B2%EE%B23%D7%E0%E0%FD%E0%B3%B0%BE%B0%FF%E1%F5%C1%F1%FD%E0%F7%C1%F1%FD%E0%FF%B0%A8%B0%DE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%FC%FD%B2%E1%F7%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E2%FD%E0%E3%E7%F7%B2%F7%E1%E6%F3%B2%E2s%F5%FB%FC%F3%B2%FC%FD%B2%F4%FD%E0%FF%F3%B2%E2%F3%E0%E6%F7%B2%B2%F6%F7%B2%E7%FC%B2%E2%F3%E3%E7%F7%E6%F7%B2%C1%D1%DD%C0%DF%BC%B0%BE%B0%FF%E1%F5%C3%E7%F7%E1%E6%FB%FD%FC%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%C1%F1%FD%E0%F7%B0%A8%B03%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E7%FC%F3%B2%E4%F7%E8%B3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%B0%A8%B0%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%B0%BE%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B0%DB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%D3%E7%E6%FA%FD%E0%B0%A8%B0%D3%E7%E6%FD%E0%7F%F3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B2%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F8%E7%F5%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%BC%B0%BE%B0%FF%E1%F5%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F3%E7%E6%FD%FFs%E6%FB%F1%F3%FF%F7%FC%E6%F7%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B0%BE%B0%FF%E1%F5%CB%FD%E7%C1%F1%FD%E0%F7%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C1%F7%E4%F7%E0%F3%FE%C1%F1%FD%E0%F7%B0%A8%B0%C2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E6%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%F1%FD%FF%FD%B2%E3%E7%FB%F7%E0%F3%B0%BE%B0%FF%E1%F5%CB%FD%E7%DE%F3%E1%E6%C1%F1%FD%E0%F7%B0%A8%B0%DE%F3%B2h%FE%E6%FB%FF%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%F5%E7%F3%E0%F6%F3%F6%F3%B2%F7%E1%B0%BE%B0%FF%E1%F5%D3%F1%E6%FB%E6%EB%D1%FD%FF%E2%FE%EB%B0%A8%B0%CB%F3%B2%FA%F3%B2%E0%F7%F3%FE%FB%E8%F3%F6%FD%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%BC%B0%BE%B0%FF%E1%F5%C2%FE%F3%EB%C1%F7%E4%F7%E0%F3%FE%C6%FB%FF%F7%E1%B0%A8%B0%C2%E7%F7%F6%F7%B2%E0%F7%F3%FE%FB%E8%F3%E0%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%B2%F1%E7%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%E3%E7%FB%F7%E0%F3%B0%BE%B0%FF%E1%F5%C6%E0%EB%D3%F5%F3%FB%FC%B0%A8%B0%DC%F7%F1%F7%E1%FB%E6%F3%E1%B2%F3%FE%B2%FF%F7%FC%FD%E1%B2%B7%E1%B7%B2%F6%F7%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%E1%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%B2%E2%F3%E0%F3%B2%FD%F0%E6%F7%FC%F7%E0%B2%FE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%BC%B2%DB%FC%E6%7B%FC%E6%F3%FE%FD%B2%F6%F7%B2%FC%E7%F7%E4%FD%BC%B0%BE%B0%FF%E1%F5%C4%FB%F6%F7%FD%DB%FC%E6%E0%FD%B0%A8%B0%C4%7F%F6%F7%FD%B2%F6%F7%B2%FB%FC%E6%E0%FD%F6%E7%F1%F1%FBa%FC%B0%BE%B0%FF%E1%F5%D1%FE%FD%E1%F7%B0%A8%B0%D1%F7%E0%E0%F3%E0%B0%BE%B0%FF%E1%F5%DD%E2%E6%FB%FD%FC%B0%A8%B0%DD%E2%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C7%E1%F7%D4%E7%FE%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B0%F7%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%E1%F7%E0s%B2%FF%E7%EB%B2h%E6%FB%FE%B0%BE%B0%FF%E1%F5%DE%FD%F3%F6%FB%FC%F5%B0%A8%B0%D1%F3%E0%F5%F3%FC%F6%FD%BC%B2%D7%E1%E2%F7%E0%F7%BE%B2%E2%FD%E0%B2%F4%F3%E4%FD%E0%BC%BC%BC%B0%BE%B0%FF%E1%F5%C2%FD%FB%FC%E6%E1%B0%A8%B0%E2%E7%FC%E6%FD%E1%B0%BE%B0%FF%E1%F5%D3%E7%F6%FB%FD%B0%A8%B0%D3%E7%F6%FB%FD%B0%BE%B0%FF%E1%F5%D7%FC%F6%D5%F3%FF%F7%C1%F1%FD%E0%F7%B0%A8%B0%DB%FC%FB%F1%FB%F3%B2%F7%FE%B2%F8%E7%F7%F5%FD%BC%BC%BC%B0%BE%B0%FF%E1%F5%C7%FC%F1%FD%FF%E2%FE%F7%E6%F7%F6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%F1%FD%FF%E2%FE%F7%E6%F3%F6%F3%B0%BE%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B0%FF%E1%F5%C7%FC%E1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B0%FF%E1%F5%C6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%E1%B2%E0s%E2%FB%F6%F3%E1%B0%EF%EF</div><div class="quext-bns js-hidden">Su navegador no es compatible con esta herramienta.</div></div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s3-como-aprende-a-ver.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s5-vuestros-signos.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - non commercial - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-20260728120000PAGE03">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S3 · Cómo aprende a ver | Enseña a la máquina: datos, sesgos e inteligencia artificial</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de inteligencia artificial y Big Data para 3.º de ESO (Computación y Robótica): datos y metadatos, scraping, aprendizaje automático supervisado con LearningML, aprendizaje por refuerzo y reflexión sobre sesgos y ética de la IA. Reto: reconocedor de signos de la lengua de signos española.">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260728120000BD3SDA06","packageTitle":"Enseña a la máquina: datos, sesgos e inteligencia artificial","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../idevices/scrambled-list/scrambled-list.js"></script><link rel="stylesheet" href="../idevices/scrambled-list/scrambled-list.css">
+<script src="../idevices/relate/relate.js"></script><link rel="stylesheet" href="../idevices/relate/relate.css">
+<script src="../libs/jquery-ui/jquery-ui.min.js"> </script>
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#20260728120000PAGE03" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Inicio</a>
+</li>
+<li> <a href="../html/s1-la-ia-que-ya-usas.html" class="no-ch">S1 · La IA que ya usas</a>
+</li>
+<li> <a href="../html/s2-datos-y-metadatos.html" class="no-ch">S2 · Datos y metadatos</a>
+</li>
+<li class="active"> <a href="../html/s3-como-aprende-a-ver.html" class="active no-ch">S3 · Cómo aprende a ver</a>
+</li>
+<li> <a href="../html/s4-tu-primer-modelo.html" class="no-ch">S4 · Tu primer modelo</a>
+</li>
+<li> <a href="../html/s5-vuestros-signos.html" class="no-ch">S5 · Vuestros signos</a>
+</li>
+<li> <a href="../html/s6-entrenar-y-aprender-por-refuerzo.html" class="no-ch">S6 · Entrenar y aprender por refuerzo</a>
+</li>
+<li> <a href="../html/s7-demo-sesgos-y-etica.html" class="no-ch">S7 · Demo, sesgos y ética</a>
+</li>
+<li> <a href="../html/chuleta.html" class="no-ch">Chuleta</a>
+</li>
+<li> <a href="../html/para-ir-mas-alla.html" class="no-ch">Para ir más allá</a>
+</li>
+</ul>
+</nav><main id="20260728120000PAGE03" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">4</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Enseña a la máquina: datos, sesgos e inteligencia artificial</p></div>
+<div class="page-header"><h1 class="page-title">S3 · Cómo aprende a ver</h1></div>
+</header><div id="page-content-20260728120000PAGE03" class="page-content">
+<article id="20260728120000BLK003" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="20260728120000IDEV003" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;20260728120000IDEV003&quot;}">
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">De qué va esta sesión</p>
+  <p>Hoy empieza el reto. Antes de tocar ninguna herramienta necesitas entender qué está
+  pasando por dentro cuando una máquina «reconoce» una imagen: qué son los ejemplos, las
+  etiquetas, el entrenamiento y el modelo. Y por qué la calidad de tus ejemplos decide el
+  resultado.</p>
+</div>
+
+<h2>1. Un ordenador no ve una foto: ve números</h2>
+<p>Donde tú ves una mano, el ordenador ve una rejilla de miles de píxeles, cada uno con tres
+números (cuánto rojo, cuánto verde, cuánto azul). Nada más. No hay «mano» por ningún lado.</p>
+
+<p>Entonces, ¿cómo puede distinguir una mano abierta de un puño? Igual que lo aprendiste tú:
+<strong>viendo muchos ejemplos</strong> hasta captar el patrón.</p>
+
+<h2>2. Cómo aprendiste tú lo que es un perro</h2>
+<figure><img src="../content/resources/muchos_perros.jpg" alt="Rejilla con fotografías de perros de razas muy diferentes"></figure>
+
+<p>Nadie te dio una definición técnica de «perro». No te dijeron «cuadrúpedo de entre 20 y 90
+centímetros con hocico alargado y pabellones auriculares móviles». Simplemente, alguien te fue
+señalando perros: «mira, un perro», «ese también es un perro».</p>
+
+<p>Con unas decenas de ejemplos ya sabías reconocer perros que no habías visto nunca. Eso es
+<strong>generalizar</strong>.</p>
+
+<figure><img src="../content/resources/generalizacion_perro.jpg" alt="Cinco fotos de perros de razas distintas que apuntan con flechas a la etiqueta Perro"></figure>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Actividad 5 — El caso difícil</p>
+  <figure><img src="../content/resources/perro_puli.jpg" alt="Perro de raza puli, con el pelo formando largas rastas que le cubren todo el cuerpo"></figure>
+  <p>Esto es un perro (raza <em>puli</em>). Sin embargo, mucha gente que lo ve por primera vez
+  duda. En equipo, responded:</p>
+  <ol>
+    <li>¿Por qué cuesta reconocerlo como perro?</li>
+    <li>Si hubieras aprendido lo que es un perro viendo <strong>solo</strong> pastores alemanes,
+    ¿qué pasaría al ver este?</li>
+    <li>Traducidlo a vuestro reto: si entrenáis el reconocedor de signos con <strong>una sola
+    mano</strong> y <strong>un solo fondo</strong>, ¿qué creéis que pasará cuando lo pruebe otra
+    persona?</li>
+  </ol>
+</div>
+
+<h2>3. Las tres fases del aprendizaje supervisado</h2>
+<p>El tipo de aprendizaje que vais a usar se llama <strong>supervisado</strong> porque una
+persona (vosotros) le dice a la máquina la respuesta correcta de cada ejemplo. Tiene siempre
+tres fases:</p>
+
+<figure><img src="../content/resources/proceso_datos_modelo.png" alt="Esquema: los datos de ejemplo entran en LearningML y se obtiene un modelo"></figure>
+
+<table class="tabla-datos">
+  <thead><tr><th>Fase</th><th>Qué ocurre</th><th>Quién lo hace</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1. Entrenamiento</strong></td>
+        <td>Se reúnen ejemplos y se <strong>etiqueta</strong> cada uno con la clase a la que pertenece.</td>
+        <td><strong>Tú.</strong> Es trabajo manual y es el que más importa.</td></tr>
+    <tr><td><strong>2. Aprendizaje</strong></td>
+        <td>Un algoritmo analiza todos los ejemplos, busca patrones y construye el <strong>modelo</strong>.</td>
+        <td>La máquina, en unos segundos o minutos.</td></tr>
+    <tr><td><strong>3. Evaluación</strong></td>
+        <td>Se prueba el modelo con ejemplos <strong>nuevos</strong>, que no se usaron para entrenar, y se mira si acierta.</td>
+        <td><strong>Tú</strong> otra vez, y sin hacer trampas.</td></tr>
+  </tbody>
+</table>
+
+<div class="marco marco-formula">
+  <p class="marco-titulo">La regla de oro de la evaluación</p>
+  <p>Probar el modelo con las <strong>mismas</strong> imágenes con las que lo entrenaste es como
+  hacer un examen con las respuestas delante: siempre saldrá bien y no te dirá nada.
+  <strong>Guarda siempre unas cuantas imágenes sin usar</strong> para probar.</p>
+</div>
+
+<h2>4. Agentes inteligentes</h2>
+<p>Un <strong>agente inteligente</strong> es un sistema que <strong>percibe</strong> su entorno,
+<strong>decide</strong> y <strong>actúa</strong> sobre él. Siempre el mismo bucle:</p>
+
+<div class="marco marco-teoria">
+<svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Bucle de un agente inteligente: percibir, decidir, actuar y volver a percibir"
+     style="width:100%;height:auto">
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="40"  y="55" width="170" height="70" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+    <text x="125" y="85" font-size="17" font-weight="bold" fill="#453f93">PERCIBE</text>
+    <text x="125" y="107" font-size="12" fill="#333">sensores, cámara, micro</text>
+
+    <rect x="295" y="55" width="170" height="70" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+    <text x="380" y="85" font-size="17" font-weight="bold" fill="#453f93">DECIDE</text>
+    <text x="380" y="107" font-size="12" fill="#333">el modelo clasifica</text>
+
+    <rect x="550" y="55" width="170" height="70" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+    <text x="635" y="85" font-size="17" font-weight="bold" fill="#453f93">ACTÚA</text>
+    <text x="635" y="107" font-size="12" fill="#333">responde, se mueve, avisa</text>
+
+    <g stroke="#453f93" stroke-width="2" fill="none">
+      <path d="M212 90 h78" marker-end="url(#ag)"/>
+      <path d="M467 90 h78" marker-end="url(#ag)"/>
+      <path d="M635 128 v22 H125 v-22" marker-end="url(#ag)"/>
+    </g>
+    <text x="380" y="172" font-size="12" fill="#453f93">…y vuelve a empezar</text>
+  </g>
+  <defs><marker id="ag" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 z" fill="#453f93"/></marker></defs>
+</svg>
+</div>
+
+<p>Un robot aspirador es un agente: percibe con sus sensores, decide hacia dónde ir y se mueve.
+<strong>Vuestro reconocedor de signos también lo será</strong>: percibirá con la cámara, decidirá
+qué signo es y actuará mostrando la palabra en pantalla.</p>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Actividad 6 — Formad los equipos y repartid papeles</p>
+  <p>A partir de ahora trabajáis en equipo. Repartíos estos cuatro papeles (pueden rotar, pero
+  cada sesión alguien es responsable de cada uno):</p>
+  <table class="tabla-datos">
+    <thead><tr><th>Papel</th><th>De qué responde</th></tr></thead>
+    <tbody>
+      <tr><td>Datos</td><td>Que las imágenes sean suficientes, variadas y estén bien etiquetadas. Guarda el archivo <code>.json</code> al terminar cada sesión.</td></tr>
+      <tr><td>Entrenamiento</td><td>Ejecutar el aprendizaje, probar el modelo y anotar los resultados.</td></tr>
+      <tr><td>Programación</td><td>El programa de Scratch que usa el modelo.</td></tr>
+      <tr><td>Presentación</td><td>La demo final y la reflexión de la S7.</td></tr>
+    </tbody>
+  </table>
+  <p>Anotad el reparto: forma parte de la entrega del reto.</p>
+</div>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Vocabulario de la sesión</p>
+  <ul>
+    <li><strong>Clase</strong> (o <strong>etiqueta</strong>): cada una de las categorías que el modelo debe distinguir. En vuestro reto, cada signo será una clase.</li>
+    <li><strong>Conjunto de datos</strong> (<em>dataset</em>): todos los ejemplos etiquetados que usáis para entrenar.</li>
+    <li><strong>Entrenar:</strong> ejecutar el algoritmo que construye el modelo a partir del conjunto de datos.</li>
+    <li><strong>Confianza:</strong> el porcentaje de seguridad con el que el modelo da su respuesta.</li>
+  </ul>
+</div>
+</div>
+</div>
+</article><article id="block-ms5tjuwn-wa4so49xb" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Lista desordenada</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1785313481782-rk7vxek4h" class="idevice_node scrambled-list" data-idevice-path="../idevices/scrambled-list/" data-idevice-type="scrambled-list" data-idevice-component-type="json" data-idevice-json-data="{&quot;typeGame&quot;:&quot;ScrambledList&quot;,&quot;instructions&quot;:&quot;&lt;p&gt;Ordena correctamente las fases del &lt;strong&gt;aprendizaje supervisado&lt;/strong&gt;&lt;/p&gt;&quot;,&quot;textAfter&quot;:&quot;&quot;,&quot;afterElement&quot;:&quot;&quot;,&quot;options&quot;:[&quot;Reunir imágenes de ejemplo&quot;,&quot;Etiquetar cada imagen con su clase&quot;,&quot;Ejecutar el algoritmo de aprendizaje&quot;,&quot;Obtener el modelo&quot;,&quot;Probar el modelo con imágenes nuevas&quot;,&quot;Si falla, añadir más imágenes y volver a entrenar&quot;],&quot;time&quot;:0,&quot;buttonText&quot;:&quot;Comprobar&quot;,&quot;rightText&quot;:&quot;¡Correcto!&quot;,&quot;wrongText&quot;:&quot;El orden importa: sin etiquetar no se puede entrenar, y probar con las mismas imágenes del entrenamiento no demuestra nada.&quot;,&quot;isScorm&quot;:0,&quot;textButtonScorm&quot;:&quot;Guardar la puntuación&quot;,&quot;repeatActivity&quot;:true,&quot;weighted&quot;:100,&quot;evaluation&quot;:false,&quot;evaluationID&quot;:&quot;ba045cdc-0c42-4929-9f1a-60ed64d395a5&quot;,&quot;main&quot;:&quot;slidevice-1785313481782-rk7vxek4h&quot;,&quot;msgs&quot;:{&quot;msgScoreScorm&quot;:&quot;La puntuación no se puede guardar porque esta página no forma parte  de un paquete SCORM.&quot;,&quot;msgYouScore&quot;:&quot;Su puntuación&quot;,&quot;msgScore&quot;:&quot;Puntuación&quot;,&quot;msgWeight&quot;:&quot;Peso&quot;,&quot;msgYouLastScore&quot;:&quot;La última puntuación guardada es&quot;,&quot;msgOnlySaveScore&quot;:&quot;¡Solo puede guardar la puntuación una vez!&quot;,&quot;msgOnlySave&quot;:&quot;Solo puede guardar una vez&quot;,&quot;msgOnlySaveAuto&quot;:&quot;Su puntuación se guardará después de cada pregunta. Solo puede jugar una vez.&quot;,&quot;msgSaveAuto&quot;:&quot;Su puntuación se guardará automáticamente después de cada pregunta.&quot;,&quot;msgSeveralScore&quot;:&quot;Puede guardar la puntuación tantas veces como quiera&quot;,&quot;msgPlaySeveralTimes&quot;:&quot;Puede realizar esta actividad cuantas veces quiera&quot;,&quot;msgActityComply&quot;:&quot;Ya ha realizado esta actividad.&quot;,&quot;msgUncompletedActivity&quot;:&quot;Actividad no completada&quot;,&quot;msgSuccessfulActivity&quot;:&quot;Actividad superada. Puntuación: %s&quot;,&quot;msgUnsuccessfulActivity&quot;:&quot;Actividad no superada. Puntuación: %s&quot;,&quot;msgTypeGame&quot;:&quot;Lista desordenada&quot;,&quot;msgStartGame&quot;:&quot;Pulsa aquí para empezar&quot;,&quot;msgSubmit&quot;:&quot;Enviar&quot;,&quot;msgPlayStart&quot;:&quot;Pulsa aquí para jugar&quot;,&quot;msgTime&quot;:&quot;Tiempo por pregunta&quot;,&quot;msgCheck&quot;:&quot;Comprobar&quot;,&quot;msgSaveScore&quot;:&quot;Guardar la puntuación&quot;,&quot;msgTestFailed&quot;:&quot;No has superado la prueba. Inténtalo de nuevo&quot;,&quot;msgRetryAttempts&quot;:&quot;Has cometido %s errores. Te quedan %s intentos. ¿Quieres intentarlo de nuevo?&quot;},&quot;scorerp&quot;:0,&quot;idevice&quot;:&quot;idevice_node&quot;,&quot;showSolutions&quot;:true,&quot;attemptsNumber&quot;:1,&quot;id&quot;:&quot;idevice-1785313481782-rk7vxek4h&quot;}" data-idevice-template="scrambled-list.html">
+<div class="exe-sortableList" id="slidevice-1785313481782-rk7vxek4h" scorm=false>
+    <div class="game-evaluation-ids js-hidden" data-id="idevice-1785313481782-rk7vxek4h" data-evaluationb="false" data-evaluationid="ba045cdc-0c42-4929-9f1a-60ed64d395a5"></div>
+    <div class="exe-sortableList-instructions"><p>Ordena correctamente las fases del <strong>aprendizaje supervisado</strong></p></div>
+    <ul class="exe-sortableList-list"><li data-orig-index="0">Reunir imágenes de ejemplo</li><li data-orig-index="1">Etiquetar cada imagen con su clase</li><li data-orig-index="2">Ejecutar el algoritmo de aprendizaje</li><li data-orig-index="3">Obtener el modelo</li><li data-orig-index="4">Probar el modelo con imágenes nuevas</li><li data-orig-index="5">Si falla, añadir más imágenes y volver a entrenar</li></ul>
+    <div style="display:none">
+        <p class="exe-sortableList-buttonText">Comprobar</p>
+        <p class="exe-sortableList-rightText">¡Correcto!</p>
+        <p class="exe-sortableList-wrongText">El orden importa: sin etiquetar no se puede entrenar, y probar con las mismas imágenes del entrenamiento no demuestra nada.</p>
+    </div>
+    <div class="exe-scorm-message"></div>
+    
+</div>
+</div>
+</div>
+</article><article id="block-ms7anr72-416gqs51i" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Relaciona</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1785402683246-jziya90z7" class="idevice_node relate" data-idevice-path="../idevices/relate/" data-idevice-type="relate">
+<div class="relaciona-IDevice"><div class="relaciona-instructions gameQP-instructions"><p>Relaciona cada tarjeta con su pareja.</p></div><div class="relaciona-DataGame js-hidden">{"typeGame":"Relaciona","author":"","randomCards":true,"instructions":"<p>Relaciona cada tarjeta con su pareja.</p>","showMinimize":false,"itinerary":{"showClue":false,"clueGame":"","percentageClue":40,"showCodeAccess":false,"codeAccess":"","messageCodeAccess":""},"cardsGame":[{"url":"","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"Clase","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"Cada%20categor%C3%ADa%20que%20el%20modelo%20debe%20distinguir"},{"url":"","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"Conjunto%20de%20datos","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"Todos%20los%20ejemplos%20etiquetados%20con%20los%20que%20se%20entrena"},{"url":"","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"Modelo","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"El%20resultado%20del%20entrenamiento"},{"url":"","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"Generalizar","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"Acertar%20con%20ejemplos%20que%20no%20se%20usaron%20al%20entrenar"},{"url":"","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"Confianza","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"Porcentaje%20de%20seguridad%20de%20una%20respuesta"},{"url":"","x":0,"y":0,"author":"","alt":"","audio":"","color":"#000000","backcolor":"#ffffff","eText":"Agente%20inteligente","urlBk":"","xBk":0,"yBk":0,"authorBk":"","altBk":"","audioBk":"","colorBk":"#000000","backcolorBk":"#ffffff","eTextBk":"Sistema%20que%20percibe%2C%20decide%20y%20act%C3%BAa"}],"isScorm":0,"textButtonScorm":"Guardar la puntuación","repeatActivity":true,"weighted":100,"textAfter":"","version":2,"percentajeCards":100,"type":0,"showSolution":true,"timeShowSolution":3,"time":3,"evaluation":false,"evaluationID":"f96bc37c-5aaf-40e4-af65-a544218a46a6","id":"idevice-1785402683246-jziya90z7","msgs":{"msgSubmit":"Enviar","msgClue":"¡Genial! La pista es:","msgCodeAccess":"Código de acceso","msgPlayStart":"Pulsa aquí para jugar","msgScore":"Puntuación","msgErrors":"Errores","msgHits":"Aciertos","msgMinimize":"Minimizar","msgMaximize":"Maximizar","msgFullScreen":"Pantalla Completa","msgExitFullScreen":"Salir del modo pantalla completa","msgNoImage":"Pregunta sin imágenes","msgEndGameScore":"Comience la partida antes de guardar la puntuación.","msgScoreScorm":"La puntuación no se puede guardar porque esta página no forma parte  de un paquete SCORM.","msgOnlySaveScore":"¡Solo puede guardar la puntuación una vez!","msgOnlySave":"Solo puede guardar una vez","msgInformation":"Información","msgYouScore":"Su puntuación","msgAuthor":"Autoría","msgOnlySaveAuto":"Su puntuación se guardará después de cada pregunta. Solo puede jugar una vez.","msgSaveAuto":"Su puntuación se guardará automáticamente después de cada pregunta.","msgSeveralScore":"Puede guardar la puntuación tantas veces como quiera","msgYouLastScore":"La última puntuación guardada es","msgActityComply":"Ya ha realizado esta actividad.","msgPlaySeveralTimes":"Puede realizar esta actividad cuantas veces quiera","msgClose":"Cerrar","msgAudio":"Audio","msgNumQuestions":"Número de tarjetas","msgTryAgain":"Necesitas al menos %s% de respuestas correctas para obtener la información. Inténtalo de nuevo.","msgEndGameM":"Has completado el juego. Tu puntuación es %s.","msgUncompletedActivity":"Actividad no completada","msgSuccessfulActivity":"Actividad superada. Puntuación: %s","msgUnsuccessfulActivity":"Actividad no superada. Puntuación: %s","msgTypeGame":"Relaciona","msgCheck":"Comprobar","msgRestart":"Reiniciar"}}</div><div class="game-evaluation-ids js-hidden" data-id="idevice-1785402683246-jziya90z7" data-evaluationb="false" data-evaluationid="f96bc37c-5aaf-40e4-af65-a544218a46a6"></div><div class="relaciona-bns js-hidden">Su navegador no es compatible con esta herramienta.</div></div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s2-datos-y-metadatos.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s4-tu-primer-modelo.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - non commercial - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

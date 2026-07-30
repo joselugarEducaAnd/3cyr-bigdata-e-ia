@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-20260728120000PAGE06">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S6 · Entrenar y aprender por refuerzo | Enseña a la máquina: datos, sesgos e inteligencia artificial</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de inteligencia artificial y Big Data para 3.º de ESO (Computación y Robótica): datos y metadatos, scraping, aprendizaje automático supervisado con LearningML, aprendizaje por refuerzo y reflexión sobre sesgos y ética de la IA. Reto: reconocedor de signos de la lengua de signos española.">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260728120000BD3SDA06","packageTitle":"Enseña a la máquina: datos, sesgos e inteligencia artificial","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../idevices/trueorfalse/trueorfalse.js"></script><link rel="stylesheet" href="../idevices/trueorfalse/trueorfalse.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#20260728120000PAGE06" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Inicio</a>
+</li>
+<li> <a href="../html/s1-la-ia-que-ya-usas.html" class="no-ch">S1 · La IA que ya usas</a>
+</li>
+<li> <a href="../html/s2-datos-y-metadatos.html" class="no-ch">S2 · Datos y metadatos</a>
+</li>
+<li> <a href="../html/s3-como-aprende-a-ver.html" class="no-ch">S3 · Cómo aprende a ver</a>
+</li>
+<li> <a href="../html/s4-tu-primer-modelo.html" class="no-ch">S4 · Tu primer modelo</a>
+</li>
+<li> <a href="../html/s5-vuestros-signos.html" class="no-ch">S5 · Vuestros signos</a>
+</li>
+<li class="active"> <a href="../html/s6-entrenar-y-aprender-por-refuerzo.html" class="active no-ch">S6 · Entrenar y aprender por refuerzo</a>
+</li>
+<li> <a href="../html/s7-demo-sesgos-y-etica.html" class="no-ch">S7 · Demo, sesgos y ética</a>
+</li>
+<li> <a href="../html/chuleta.html" class="no-ch">Chuleta</a>
+</li>
+<li> <a href="../html/para-ir-mas-alla.html" class="no-ch">Para ir más allá</a>
+</li>
+</ul>
+</nav><main id="20260728120000PAGE06" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">7</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Enseña a la máquina: datos, sesgos e inteligencia artificial</p></div>
+<div class="page-header"><h1 class="page-title">S6 · Entrenar y aprender por refuerzo</h1></div>
+</header><div id="page-content-20260728120000PAGE06" class="page-content">
+<article id="20260728120000BLK006" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="20260728120000IDEV006" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;20260728120000IDEV006&quot;}">
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">De qué va esta sesión</p>
+  <p>Dos partes. Primero terminaréis vuestro reconocedor: entrenar, medir, mejorar y programarlo
+  en Scratch. Después descubriréis que el aprendizaje supervisado que habéis usado
+  <strong>no es la única forma de aprender</strong> que tienen las máquinas: existe otra, el
+  <strong>aprendizaje por refuerzo</strong>, y vais a ver a un agente aprendiendo delante de
+  vuestros ojos.</p>
+</div>
+
+<h2>Parte A · Entrenad, medid, mejorad</h2>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">1. Recuperad el trabajo y entrenad</p>
+  <ol>
+    <li>Descargad de Classroom vuestro <code>reto_signos.json</code>.</li>
+    <li>Abrid <a href="https://learningml.org/lml-editor/?locale=es" target="_blank" rel="noopener">el
+    editor de LearningML</a> → <strong>«Reconocimiento de imágenes»</strong> → menú
+    <strong>Archivo</strong> → <em>«Subir conjunto de datos desde tu ordenador»</em> y elegid
+    el archivo.</li>
+    <li>Comprobad que están todas las clases con sus imágenes.</li>
+    <li>Zona <em>Aprender</em> → <strong>«Aprender a reconocer imágenes»</strong>.</li>
+  </ol>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">2. La prueba honrada</p>
+  <p>Coged las imágenes que reservasteis en la S5 —las que <strong>no</strong> metisteis en
+  ninguna clase— y probad el modelo con ellas, en la zona <em>Probar</em>
+  («Tomar desde la cámara» o «Subir imágenes», según tengáis webcam o no). Rellenad esta tabla
+  en el documento del equipo:</p>
+  <table class="tabla-datos">
+    <thead><tr><th>Prueba</th><th>Signo real</th><th>Qué dijo el modelo</th><th>Confianza</th><th>¿Acertó?</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td></td><td></td><td>%</td><td></td></tr>
+      <tr><td>2</td><td></td><td></td><td>%</td><td></td></tr>
+      <tr><td>3</td><td></td><td></td><td>%</td><td></td></tr>
+      <tr><td>…</td><td></td><td></td><td>%</td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Y calculad: <strong>aciertos ÷ pruebas × 100 = ____ % de acierto</strong>.</p>
+  <p><strong>Prueba extra, la que de verdad importa:</strong> pedidle a alguien de
+  <strong>otro equipo</strong> que haga vuestros signos y probad el modelo con
+  <em>sus</em> manos (delante de la cámara, o con unas fotos suyas hechas al momento si no
+  tenéis webcam). Anotad el resultado aparte. Casi siempre baja, y esa bajada es el hallazgo más
+  interesante de toda la unidad.</p>
+</div>
+
+<div class="marco marco-formula">
+  <p class="marco-titulo">3. Cómo mejorar un modelo (por orden de eficacia)</p>
+  <ol>
+    <li><strong>Más variedad</strong> en las clases que fallan: otras manos, otras distancias,
+    otra luz. Es lo que más resultado da.</li>
+    <li><strong>Equilibrar</strong>: subir el número de imágenes de la clase con menos.</li>
+    <li><strong>Limpiar</strong>: borrar las imágenes movidas, cortadas o dudosas.</li>
+    <li><strong>Separar mejor las clases</strong>: si dos signos se confunden siempre, quizá
+    son demasiado parecidos para el número de imágenes que tenéis.</li>
+  </ol>
+  <p>Y después de cualquier cambio, <strong>hay que volver a entrenar</strong>: el modelo no se
+  actualiza solo.</p>
+</div>
+
+<div class="bloque bloque-resuelto">
+  <p class="bloque-titulo">4. El programa final en Scratch</p>
+  <p>Pulsad el botón del gatito para abrir
+  <a href="https://learningml.org/lml-scratch/?locale=es" target="_blank" rel="noopener">el
+  editor de programación</a> con vuestro modelo cargado. El programa mínimo:</p>
+  <ol>
+    <li><code>al hacer clic en 🏳</code></li>
+    <li><code>Turn video [ON]</code></li>
+    <li><code>por siempre</code>:
+      <ul>
+        <li><code>si &lt;(Confidence for item (Video Image)) &gt; 70&gt; entonces</code>
+          <ul><li><code>decir (Classify item (Video Image)) durante 2 segundos</code></li></ul>
+        </li>
+        <li><code>si no</code>
+          <ul><li><code>decir "No lo veo claro, acércate más" durante 2 segundos</code></li></ul>
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <p>Ese <code>si</code> con la confianza es lo que separa un programa de clase de uno bien
+  hecho: <strong>un sistema que sabe cuándo no está seguro</strong> es mucho más útil que uno
+  que siempre responde algo.</p>
+  <p><strong>Sin webcam:</strong> subid vuestras fotos de prueba como <strong>disfraces</strong>
+  del objeto y sustituid <code>Turn video [ON]</code> por <code>siguiente disfraz</code> y
+  <code>Video Image</code> por <code>Current costume</code>, igual que hicisteis en la S4. Todo
+  lo demás del programa, incluido el <code>si</code> de la confianza, queda igual.</p>
+  <p><strong>Ampliación opcional:</strong> que además cambie el fondo o el disfraz según el
+  signo, que lo diga en voz alta con los bloques de <em>Texto a voz</em>, o que vaya guardando en
+  una lista los signos reconocidos para formar una frase.</p>
+  <p><strong>Guardad:</strong> <em>Archivo → Guardar en tu ordenador</em> →
+  <code>reto_signos.sb3</code> (lleva el modelo dentro) y también el
+  <code>reto_signos.json</code> actualizado. Los dos, a la tarea de Classroom.</p>
+</div>
+
+<h2>Parte B · Otra forma de aprender: el refuerzo</h2>
+
+<p>Todo lo que habéis hecho es <strong>aprendizaje supervisado</strong>: vosotros le disteis las
+respuestas correctas. Pero hay problemas en los que nadie conoce la respuesta correcta de
+antemano. ¿Cuál es la jugada «correcta» en el minuto 23 de una partida de ajedrez? ¿Cuánto tiene
+que doblar la rodilla un robot para no caerse?</p>
+
+<p>Para eso está el <strong>aprendizaje por refuerzo</strong>: el agente
+<strong>prueba</strong>, recibe un <strong>premio</strong> o un <strong>castigo</strong> según
+el resultado, y ajusta su comportamiento para conseguir más premios. Nadie le dice qué hacer;
+solo si le ha salido bien o mal.</p>
+
+<div class="marco marco-teoria">
+<svg viewBox="0 0 800 230" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Bucle del aprendizaje por refuerzo: el agente actúa sobre el entorno y recibe una recompensa"
+     style="width:100%;height:auto">
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="90"  y="30" width="200" height="70" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+    <text x="190" y="62" font-size="18" font-weight="bold" fill="#453f93">AGENTE</text>
+    <text x="190" y="84" font-size="12" fill="#333">el que aprende</text>
+
+    <rect x="510" y="30" width="200" height="70" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+    <text x="610" y="62" font-size="18" font-weight="bold" fill="#453f93">ENTORNO</text>
+    <text x="610" y="84" font-size="12" fill="#333">el juego, el mundo</text>
+
+    <path d="M292 52 h214" stroke="#453f93" stroke-width="2" fill="none" marker-end="url(#rf)"/>
+    <text x="400" y="42" font-size="13" fill="#453f93" font-weight="bold">acción</text>
+
+    <path d="M508 82 h-214" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#rfr)"/>
+    <text x="400" y="105" font-size="13" fill="#c0392b" font-weight="bold">recompensa o castigo</text>
+
+    <rect x="230" y="145" width="340" height="60" rx="10" fill="#fdf0e6" stroke="#d35400" stroke-width="2"/>
+    <text x="400" y="170" font-size="14" font-weight="bold" fill="#d35400">Si salió bien → repite más esa acción</text>
+    <text x="400" y="192" font-size="14" font-weight="bold" fill="#d35400">Si salió mal → la usa menos</text>
+  </g>
+  <defs>
+    <marker id="rf" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#453f93"/></marker>
+    <marker id="rfr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c0392b"/></marker>
+  </defs>
+</svg>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Actividad 9 — Ved aprender a una máquina de cerillas</p>
+  <p>En 1961, mucho antes de que existieran los ordenadores personales, Donald Michie construyó
+  una máquina que aprendía a jugar al tres en raya. No tenía electrónica: eran
+  <strong>304 cajas de cerillas</strong>, una por cada posición posible del tablero, llenas de
+  bolitas de colores. Cada color era una jugada.</p>
+  <p>Funcionaba así: para mover, se sacaba una bolita al azar de la caja de la posición actual.
+  Si la máquina <strong>ganaba</strong>, se le añadían bolitas de los colores que había jugado
+  (premio). Si <strong>perdía</strong>, se le quitaban (castigo). Al principio jugaba fatal.
+  Después de unas decenas de partidas, era casi imbatible.</p>
+  <p>Podéis jugar contra ella:
+  <a href="https://www.mscroggs.co.uk/menace/" target="_blank" rel="noopener">MENACE, la máquina
+  de cerillas</a> (la página está en inglés, pero se juega solo con el ratón: hacéis clic en una
+  casilla y ya).</p>
+  <ol>
+    <li>Jugad <strong>10 partidas seguidas</strong> intentando ganar siempre. Anotad el
+    resultado de cada una.</li>
+    <li>Jugad <strong>otras 15</strong>. ¿Notáis diferencia? ¿A partir de qué partida os cuesta
+    más ganar?</li>
+    <li>Mirad las cajas mientras jugáis: veréis cómo cambian las cantidades de bolitas.</li>
+  </ol>
+  <p><strong>Responded en el documento del equipo:</strong></p>
+  <ul>
+    <li>¿Alguien le ha dicho a MENACE cuál es la jugada correcta en cada posición? Entonces,
+    ¿cómo lo ha aprendido?</li>
+    <li>¿Qué pasaría si jugarais siempre igual, haciendo siempre la misma partida?</li>
+    <li>MENACE necesita perder muchas veces para aprender. ¿Os parece un problema? ¿En qué
+    situaciones del mundo real <strong>no</strong> se puede aprender así?</li>
+  </ul>
+</div>
+
+<figure>
+  <img src="../content/resources/tablero_go.jpg" alt="Tablero de Go">
+  <figcaption>La IA que ganó al campeón mundial de Go en 2016 aprendió exactamente así, con
+  aprendizaje por refuerzo: jugando millones de partidas contra sí misma y quedándose con lo
+  que la hacía ganar. La diferencia con MENACE es la escala, no la idea.</figcaption>
+</figure>
+
+<h2>Los dos aprendizajes, cara a cara</h2>
+<table class="tabla-datos">
+  <thead><tr><th></th><th>Aprendizaje supervisado<br><em>(lo que habéis hecho)</em></th><th>Aprendizaje por refuerzo<br><em>(MENACE)</em></th></tr></thead>
+  <tbody>
+    <tr><td><strong>Qué recibe</strong></td><td>Ejemplos con la respuesta correcta puesta por una persona.</td><td>Un premio o un castigo después de actuar.</td></tr>
+    <tr><td><strong>Quién sabe la respuesta</strong></td><td>La persona que etiqueta.</td><td>Nadie. Se descubre probando.</td></tr>
+    <tr><td><strong>Cómo mejora</strong></td><td>Con más ejemplos y mejor etiquetados.</td><td>Con más intentos, incluidos los que salen mal.</td></tr>
+    <tr><td><strong>Bueno para</strong></td><td>Clasificar y reconocer: signos, caras, voces, correo basura.</td><td>Decidir y controlar: juegos, robots que andan, conducción.</td></tr>
+    <tr><td><strong>Su punto débil</strong></td><td>Hereda los errores y los sesgos de quien etiqueta.</td><td>Necesita fallar muchísimo antes de acertar.</td></tr>
+  </tbody>
+</table>
+
+<div class="marco marco-nota">
+  <p class="marco-titulo">Y hay una tercera</p>
+  <p>El <strong>aprendizaje no supervisado</strong>: se le dan datos <em>sin</em> etiquetar y el
+  sistema busca por su cuenta grupos y parecidos. Es lo que hace una plataforma cuando descubre
+  que hay un grupo de gente a la que le gusta lo mismo que a ti, sin que nadie haya definido ese
+  grupo.</p>
+</div>
+</div>
+</div>
+</article><article id="block-ms7b1w7k-rg4f7abg2" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Verdadero o falso</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1785403342927-davdl604v" class="idevice_node trueorfalse" data-idevice-path="../idevices/trueorfalse/" data-idevice-type="trueorfalse" data-idevice-component-type="json" data-idevice-json-data="{&quot;id&quot;:&quot;idevice-1785403342927-davdl604v&quot;,&quot;typeGame&quot;:&quot;TrueOrFalse&quot;,&quot;eXeGameInstructions&quot;:&quot;&lt;p&gt;Responde todas las preguntas del cuestionario.&lt;/p&gt;&quot;,&quot;eXeIdeviceTextAfter&quot;:&quot;&quot;,&quot;msgs&quot;:{&quot;msgStartGame&quot;:&quot;Pulsa aquí para empezar&quot;,&quot;msgTime&quot;:&quot;Tiempo por pregunta&quot;,&quot;msgNoImage&quot;:&quot;Pregunta sin imágenes&quot;,&quot;msgScoreScorm&quot;:&quot;La puntuación no se puede guardar porque esta página no forma parte  de un paquete SCORM.&quot;,&quot;msgEndGameScore&quot;:&quot;Comience la partida antes de guardar la puntuación.&quot;,&quot;msgOnlySaveScore&quot;:&quot;¡Solo puede guardar la puntuación una vez!&quot;,&quot;msgOnlySave&quot;:&quot;Solo puede guardar una vez&quot;,&quot;msgYouScore&quot;:&quot;Su puntuación&quot;,&quot;msgAuthor&quot;:&quot;Autoría&quot;,&quot;msgOnlySaveAuto&quot;:&quot;Su puntuación se guardará después de cada pregunta. Solo puede jugar una vez.&quot;,&quot;msgSaveAuto&quot;:&quot;Su puntuación se guardará automáticamente después de cada pregunta.&quot;,&quot;msgSeveralScore&quot;:&quot;Puede guardar la puntuación tantas veces como quiera&quot;,&quot;msgYouLastScore&quot;:&quot;La última puntuación guardada es&quot;,&quot;msgActityComply&quot;:&quot;Ya ha realizado esta actividad.&quot;,&quot;msgPlaySeveralTimes&quot;:&quot;Puede realizar esta actividad cuantas veces quiera&quot;,&quot;msgUncompletedActivity&quot;:&quot;Actividad no completada&quot;,&quot;msgSuccessfulActivity&quot;:&quot;Actividad superada. Puntuación: %s&quot;,&quot;msgUnsuccessfulActivity&quot;:&quot;Actividad no superada. Puntuación: %s&quot;,&quot;msgTypeGame&quot;:&quot;Verdadero o falso&quot;,&quot;msgFeedback&quot;:&quot;Retroalimentación&quot;,&quot;msgSuggestion&quot;:&quot;Sugerencia&quot;,&quot;msgSolution&quot;:&quot;Solución&quot;,&quot;msgQuestion&quot;:&quot;Pregunta&quot;,&quot;msgTrue&quot;:&quot;Verdadero&quot;,&quot;msgFalse&quot;:&quot;Falso&quot;,&quot;msgOk&quot;:&quot;Correcto&quot;,&quot;msgKO&quot;:&quot;Incorrecto&quot;,&quot;msgShow&quot;:&quot;Mostrar&quot;,&quot;msgHide&quot;:&quot;Ocultar&quot;,&quot;msgCheck&quot;:&quot;Comprobar&quot;,&quot;msgReboot&quot;:&quot;¡Prueba otra vez!&quot;,&quot;msgScore&quot;:&quot;Puntuación&quot;,&quot;msgWeight&quot;:&quot;Peso&quot;,&quot;msgNext&quot;:&quot;Siguiente&quot;,&quot;msgPrevious&quot;:&quot;Anterior&quot;},&quot;questionsRandom&quot;:false,&quot;percentageQuestions&quot;:100,&quot;isTest&quot;:false,&quot;time&quot;:0,&quot;questionsGame&quot;:[{&quot;question&quot;:&quot;&lt;p&gt;En el aprendizaje por refuerzo alguien le dice al agente cuál es la jugada correcta.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Solo recibe premio o castigo después de actuar. Nadie le da la respuesta.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&quot;,&quot;solution&quot;:0},{&quot;question&quot;:&quot;&lt;p&gt;MENACE necesita perder muchas partidas para aprender a ganar.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Aprender por refuerzo exige equivocarse muchas veces. Ese es su coste.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&quot;,&quot;solution&quot;:1},{&quot;question&quot;:&quot;&lt;p&gt;Vuestro reconocedor de signos usa aprendizaje por refuerzo.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Usa aprendizaje supervisado: vosotros pusisteis las etiquetas.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&quot;,&quot;solution&quot;:0},{&quot;question&quot;:&quot;&lt;p&gt;El aprendizaje supervisado hereda los sesgos de quien etiqueta los datos.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Si los ejemplos representan a poca gente, el modelo también.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&quot;,&quot;solution&quot;:1},{&quot;question&quot;:&quot;&lt;p&gt;El aprendizaje por refuerzo sirve bien para robots que aprenden a moverse.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Es su terreno: decidir y controlar, no clasificar.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&quot;,&quot;solution&quot;:1}],&quot;isScorm&quot;:0,&quot;textButtonScorm&quot;:&quot;Guardar la puntuación&quot;,&quot;repeatActivity&quot;:true,&quot;weighted&quot;:100,&quot;evaluation&quot;:false,&quot;evaluationID&quot;:&quot;&quot;,&quot;showSlider&quot;:false,&quot;ideviceId&quot;:&quot;idevice-1785403342927-davdl604v&quot;}" data-idevice-template="trueorfalse.html">
+<div class="exe-trueorfalse-container">
+  
+    <div class="game-evaluation-ids js-hidden" data-id="idevice-1785403342927-davdl604v" data-evaluationb="false" data-evaluationid=""></div>
+        <div class="TOFP-instructions"><p>Responde todas las preguntas del cuestionario.</p></div>
+        <div class="TOFP-MainContainer" data-instance="idevice-1785403342927-davdl604v" id="tofPMainContainer-idevice-1785403342927-davdl604v">
+            <div class="TOFP-GameContainer" id="tofPGameContainer-idevice-1785403342927-davdl604v">
+                <div class="TOFP-GameScoreBoard TOFP-EHidden">
+                    <div class="TOFP-TimeNumber">
+                        <strong><span class="sr-av">Tiempo por pregunta:</span></strong>
+                        <p id="tofPPTime-idevice-1785403342927-davdl604v" class="TOFP-PTime">00:00:</p>
+                    </div>
+                </div>
+                <div class="TOFP-MessgeDiv" id="tofPMessageDiv-idevice-1785403342927-davdl604v">
+                    <div class="TOFP-Message" id="tofPMessage-idevice-1785403342927-davdl604v"></div>
+                </div>
+                <div class="TOFP-StartGameDiv TOFP-EHidden" id="tofPStartGameDiv-idevice-1785403342927-davdl604v">
+                    <button  id="tofPStartGame-idevice-1785403342927-davdl604v" type="button" class="btn btn-primary">Pulsa aquí para empezar</button>
+                </div>
+                <div class="TOFP-Multimedia " id="tofPMultimedia-idevice-1785403342927-davdl604v">
+                </div>
+                <div class="TOFP-CheckTestDiv TOFP-EHidden" id="tofPCheckTestDiv-idevice-1785403342927-davdl604v">
+                    <button id="tofPCheckTest-idevice-1785403342927-davdl604v" type="button" class="btn btn-primary">Comprobar</button>
+                    <button id="tofRebootTest-idevice-1785403342927-davdl604v" type="button" class="btn btn-primary TOFP-EHidden">¡Prueba otra vez!</button>
+                </div>
+        </div> 
+        <div class="Games-BottonContainer">
+            <div class="Games-GetScore">
+                <input id="tofPSendScore-idevice-1785403342927-davdl604v" type="button" value="Guardar la puntuación" class="feedbackbutton Games-SendScore" style="display:none"/> <span class="Games-RepeatActivity"></span>
+            </div>
+        </div>
+        <div class="TOFP-After"></div>
+        <div class="questionsMedia" style="display:none"></div>
+</div>
+
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s5-vuestros-signos.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s7-demo-sesgos-y-etica.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - non commercial - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-20260728120000PAGE08">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chuleta | Enseña a la máquina: datos, sesgos e inteligencia artificial</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de inteligencia artificial y Big Data para 3.º de ESO (Computación y Robótica): datos y metadatos, scraping, aprendizaje automático supervisado con LearningML, aprendizaje por refuerzo y reflexión sobre sesgos y ética de la IA. Reto: reconocedor de signos de la lengua de signos española.">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260728120000BD3SDA06","packageTitle":"Enseña a la máquina: datos, sesgos e inteligencia artificial","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#20260728120000PAGE08" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Inicio</a>
+</li>
+<li> <a href="../html/s1-la-ia-que-ya-usas.html" class="no-ch">S1 · La IA que ya usas</a>
+</li>
+<li> <a href="../html/s2-datos-y-metadatos.html" class="no-ch">S2 · Datos y metadatos</a>
+</li>
+<li> <a href="../html/s3-como-aprende-a-ver.html" class="no-ch">S3 · Cómo aprende a ver</a>
+</li>
+<li> <a href="../html/s4-tu-primer-modelo.html" class="no-ch">S4 · Tu primer modelo</a>
+</li>
+<li> <a href="../html/s5-vuestros-signos.html" class="no-ch">S5 · Vuestros signos</a>
+</li>
+<li> <a href="../html/s6-entrenar-y-aprender-por-refuerzo.html" class="no-ch">S6 · Entrenar y aprender por refuerzo</a>
+</li>
+<li> <a href="../html/s7-demo-sesgos-y-etica.html" class="no-ch">S7 · Demo, sesgos y ética</a>
+</li>
+<li class="active"> <a href="../html/chuleta.html" class="active no-ch">Chuleta</a>
+</li>
+<li> <a href="../html/para-ir-mas-alla.html" class="no-ch">Para ir más allá</a>
+</li>
+</ul>
+</nav><main id="20260728120000PAGE08" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">9</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Enseña a la máquina: datos, sesgos e inteligencia artificial</p></div>
+<div class="page-header"><h1 class="page-title">Chuleta</h1></div>
+</header><div id="page-content-20260728120000PAGE08" class="page-content">
+<article id="20260728120000BLK008" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="20260728120000IDEV008" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;20260728120000IDEV008&quot;}">
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">Para tenerla a mano</p>
+  <p>Todo lo que necesitas de las dos herramientas, en una página. Si te pierdes en cualquier
+  sesión, empieza por aquí.</p>
+</div>
+
+<h2>Las dos direcciones</h2>
+<table class="tabla-datos">
+  <thead><tr><th>Herramienta</th><th>Enlace</th><th>Para qué</th></tr></thead>
+  <tbody>
+    <tr><td>Editor de modelos</td>
+        <td><a href="https://learningml.org/lml-editor/?locale=es" target="_blank" rel="noopener">learningml.org/lml-editor</a></td>
+        <td>Crear clases, capturar imágenes, entrenar y probar.</td></tr>
+    <tr><td>Editor de programación</td>
+        <td><a href="https://learningml.org/lml-scratch/?locale=es" target="_blank" rel="noopener">learningml.org/lml-scratch</a></td>
+        <td>Scratch con bloques de aprendizaje automático.</td></tr>
+  </tbody>
+</table>
+<p>Ninguna de las dos pide cuenta. Si te salen en inglés, cambia el idioma con el icono del
+globo terráqueo de la barra de arriba (o dentro del botón <strong>☰</strong> si la ventana es
+estrecha).</p>
+
+<figure>
+  <img src="../content/resources/lml_editor_zonas.png" alt="Pantalla del editor de LearningML con las zonas Entrenamiento, Aprender y Probar">
+  <figcaption>El editor de modelos, con dos clases ya creadas.</figcaption>
+</figure>
+
+<h2>Los tres botones que más vas a usar</h2>
+<table class="tabla-datos">
+  <thead><tr><th>Zona</th><th>Botón</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td>Entrenamiento</td><td><strong>Añadir nueva clase</strong></td><td>Crea una categoría (un signo).</td></tr>
+    <tr><td>Entrenamiento (dentro de una clase)</td><td><strong>Cámara</strong> → <strong>Captura</strong> → <strong>Cerrar</strong></td><td>Añade fotos de ejemplo con la webcam.</td></tr>
+    <tr><td>Entrenamiento (dentro de una clase)</td><td><strong>Subir</strong></td><td>Añade imágenes desde archivos (.jpg, .png, .webp, .svg). <strong>Es la vía si no hay webcam.</strong> Con <em>Ctrl</em> o <em>Mayúsculas</em> eliges varias a la vez.</td></tr>
+    <tr><td>Aprender</td><td><strong>Aprender a reconocer imágenes</strong></td><td>Construye el modelo. Hay que repetirlo cada vez que cambies las imágenes.</td></tr>
+    <tr><td>Probar</td><td><strong>Tomar desde la cámara</strong> / <strong>Subir imágenes</strong></td><td>Prueba el modelo con ejemplos nuevos y muestra la confianza.</td></tr>
+  </tbody>
+</table>
+
+<h2>Guardar y recuperar (menú Archivo)</h2>
+<figure>
+  <img src="../content/resources/lml_menu_archivo.png" alt="Menú Archivo desplegado del editor de LearningML">
+  <figcaption>El menú <strong>Archivo</strong> del editor de modelos.</figcaption>
+</figure>
+<table class="tabla-datos">
+  <thead><tr><th>Quiero…</th><th>Menú</th><th>Archivo</th></tr></thead>
+  <tbody>
+    <tr><td>Guardar mis imágenes para seguir otro día</td><td>Editor → Archivo → <em>Guardar conjunto de datos en tu ordenador</em></td><td><code>.json</code></td></tr>
+    <tr><td>Recuperarlas la sesión siguiente</td><td>Editor → Archivo → <em>Subir conjunto de datos desde tu ordenador</em></td><td><code>.json</code></td></tr>
+    <tr><td>Guardar solo el modelo ya entrenado</td><td>Editor → Archivo → <em>Guardar modelo en tu ordenador</em></td><td><code>.mdl</code></td></tr>
+    <tr><td>Cargar un modelo en Scratch sin abrir el editor</td><td>Scratch → Archivo → <em>Load ML Model from your computer</em></td><td><code>.mdl</code></td></tr>
+    <tr><td>Guardar el programa (con su modelo dentro)</td><td>Scratch → Archivo → <em>Guardar en tu ordenador</em></td><td><code>.sb3</code></td></tr>
+  </tbody>
+</table>
+
+<div class="marco marco-nota">
+  <p class="marco-titulo">Antes de cerrar el navegador, siempre</p>
+  <p>Guarda el <code>.json</code> (y el <code>.sb3</code> si ya has programado) y
+  <strong>súbelos a la tarea de Classroom</strong>. LearningML no guarda nada solo.</p>
+</div>
+
+<h2>Los bloques de learningml en Scratch</h2>
+<figure>
+  <img src="../content/resources/lml_scratch_categoria.png" alt="Columna de categorías del editor de Scratch de LearningML con learningml al final">
+  <figcaption>La categoría <strong>learningml</strong> está la última de la columna.</figcaption>
+</figure>
+<p>Sus bloques están en inglés. Estos son los que necesitas:</p>
+<table class="tabla-datos">
+  <thead><tr><th>Bloque</th><th>Traducción</th><th>Devuelve</th></tr></thead>
+  <tbody>
+    <tr><td><code>Classify item [ ]</code></td><td>Clasifica</td><td>El nombre de la clase más probable.</td></tr>
+    <tr><td><code>Confidence for item [ ]</code></td><td>Confianza</td><td>El porcentaje de seguridad de esa respuesta.</td></tr>
+    <tr><td><code>Turn video [ON]</code></td><td>Activar vídeo</td><td>Enciende la cámara (<code>FLIPPED</code> = modo espejo). Solo con webcam.</td></tr>
+    <tr><td><code>Video Image</code></td><td>Imagen de vídeo</td><td>Lo que ve la cámara ahora. Es lo que le pasas a los dos primeros.</td></tr>
+    <tr><td><code>Current costume</code></td><td>Disfraz actual</td><td><strong>La alternativa sin webcam:</strong> clasifica el disfraz que lleva puesto el objeto.</td></tr>
+    <tr><td>Menú <code>Model Info</code></td><td>Información del modelo</td><td>Qué modelo hay cargado y qué clases reconoce.</td></tr>
+  </tbody>
+</table>
+
+<h2>Si algo va mal</h2>
+<table class="tabla-datos">
+  <thead><tr><th>Problema</th><th>Qué hacer</th></tr></thead>
+  <tbody>
+    <tr><td>La cámara no se activa</td><td>El navegador pide permiso la primera vez: acéptalo. Comprueba que ninguna otra pestaña la esté usando.</td></tr>
+    <tr><td>Este ordenador no tiene webcam</td><td>Ningún problema: haz las fotos con el móvil, pásalas por Classroom y usa <strong>«Subir»</strong> en vez de «Cámara». En Scratch, disfraces + <code>Current costume</code> en lugar de <code>Video Image</code>. Está explicado en la S4.</td></tr>
+    <tr><td>El botón de aprender no hace nada</td><td>Hacen falta <strong>al menos dos clases</strong> y varios ejemplos en cada una.</td></tr>
+    <tr><td>Tarda muchísimo en entrenar</td><td>Es normal si hay muchas imágenes. Espera a que la barra llegue al final; no recargues.</td></tr>
+    <tr><td>El modelo acierta siempre la misma clase</td><td>Clases desequilibradas: una tiene muchas más imágenes que las otras.</td></tr>
+    <tr><td>Acierta conmigo pero no con nadie más</td><td>Falta variedad. Añade imágenes de otras personas y vuelve a entrenar.</td></tr>
+    <tr><td>En Scratch no aparece la categoría learningml</td><td>Estás en el Scratch normal. Tienes que usar el enlace de LearningML Scratch.</td></tr>
+    <tr><td>Abrí el .sb3 y no reconoce nada</td><td>Comprueba en <em>Model Info</em> si hay modelo cargado. Si no, cárgalo con <em>Load ML Model</em>.</td></tr>
+  </tbody>
+</table>
+
+<h2>Vocabulario de toda la unidad</h2>
+<table class="tabla-datos">
+  <thead><tr><th>Palabra</th><th>Significa</th></tr></thead>
+  <tbody>
+    <tr><td>Inteligencia artificial</td><td>Programas que hacen tareas para las que hace falta algún tipo de inteligencia.</td></tr>
+    <tr><td>Aprendizaje automático</td><td>Rama de la IA en la que el programa aprende de datos en vez de seguir reglas escritas a mano.</td></tr>
+    <tr><td>Aprendizaje supervisado</td><td>Se entrena con ejemplos <em>etiquetados</em> por una persona. Es lo que usa LearningML.</td></tr>
+    <tr><td>Aprendizaje por refuerzo</td><td>Se aprende probando, con premios y castigos. Es lo de MENACE y las IA que juegan.</td></tr>
+    <tr><td>Clase o etiqueta</td><td>Cada categoría que el modelo distingue.</td></tr>
+    <tr><td>Conjunto de datos</td><td>Todos los ejemplos etiquetados con los que se entrena.</td></tr>
+    <tr><td>Modelo</td><td>El resultado del entrenamiento: lo que «sabe» la máquina.</td></tr>
+    <tr><td>Generalizar</td><td>Acertar con ejemplos nuevos que no se usaron para entrenar.</td></tr>
+    <tr><td>Confianza</td><td>Porcentaje de seguridad con el que el modelo da su respuesta.</td></tr>
+    <tr><td>Sesgo</td><td>Error sistemático del modelo causado por un conjunto de datos poco representativo.</td></tr>
+    <tr><td>Dato / metadato</td><td>La información / la información sobre esa información (fecha, lugar, autoría…).</td></tr>
+    <tr><td>Big Data</td><td>Volúmenes de datos tan grandes que hacen falta técnicas especiales para tratarlos.</td></tr>
+    <tr><td>Scraping</td><td>Recogida automática y masiva de contenido de páginas web.</td></tr>
+    <tr><td>Agente inteligente</td><td>Sistema que percibe su entorno, decide y actúa sobre él.</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s7-demo-sesgos-y-etica.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/para-ir-mas-alla.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - non commercial - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

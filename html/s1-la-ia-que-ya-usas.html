@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-20260728120000PAGE01">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S1 · La IA que ya usas | Enseña a la máquina: datos, sesgos e inteligencia artificial</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de inteligencia artificial y Big Data para 3.º de ESO (Computación y Robótica): datos y metadatos, scraping, aprendizaje automático supervisado con LearningML, aprendizaje por refuerzo y reflexión sobre sesgos y ética de la IA. Reto: reconocedor de signos de la lengua de signos española.">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260728120000BD3SDA06","packageTitle":"Enseña a la máquina: datos, sesgos e inteligencia artificial","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../idevices/quick-questions/quick-questions.js"></script><link rel="stylesheet" href="../idevices/quick-questions/quick-questions.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#20260728120000PAGE01" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Inicio</a>
+</li>
+<li class="active"> <a href="../html/s1-la-ia-que-ya-usas.html" class="active no-ch">S1 · La IA que ya usas</a>
+</li>
+<li> <a href="../html/s2-datos-y-metadatos.html" class="no-ch">S2 · Datos y metadatos</a>
+</li>
+<li> <a href="../html/s3-como-aprende-a-ver.html" class="no-ch">S3 · Cómo aprende a ver</a>
+</li>
+<li> <a href="../html/s4-tu-primer-modelo.html" class="no-ch">S4 · Tu primer modelo</a>
+</li>
+<li> <a href="../html/s5-vuestros-signos.html" class="no-ch">S5 · Vuestros signos</a>
+</li>
+<li> <a href="../html/s6-entrenar-y-aprender-por-refuerzo.html" class="no-ch">S6 · Entrenar y aprender por refuerzo</a>
+</li>
+<li> <a href="../html/s7-demo-sesgos-y-etica.html" class="no-ch">S7 · Demo, sesgos y ética</a>
+</li>
+<li> <a href="../html/chuleta.html" class="no-ch">Chuleta</a>
+</li>
+<li> <a href="../html/para-ir-mas-alla.html" class="no-ch">Para ir más allá</a>
+</li>
+</ul>
+</nav><main id="20260728120000PAGE01" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">2</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Enseña a la máquina: datos, sesgos e inteligencia artificial</p></div>
+<div class="page-header"><h1 class="page-title">S1 · La IA que ya usas</h1></div>
+</header><div id="page-content-20260728120000PAGE01" class="page-content">
+<article id="20260728120000BLK001" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="20260728120000IDEV001" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;20260728120000IDEV001&quot;}">
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">De qué va esta sesión</p>
+  <p>Todo el mundo habla de inteligencia artificial, pero pocas personas saben qué significa
+  exactamente. Hoy vas a poner orden: qué es la IA, en qué se diferencia del
+  <em>aprendizaje automático</em>, qué ha cambiado en los últimos años y —lo más importante—
+  cuál es la diferencia entre <strong>programar paso a paso</strong> y
+  <strong>enseñar con datos</strong>.</p>
+</div>
+
+<h2>1. Una idea con muchos nombres</h2>
+<p>Estas cuatro palabras se usan como si fueran sinónimos, y no lo son. Van una dentro de otra,
+como muñecas rusas:</p>
+
+<table class="tabla-datos">
+  <thead><tr><th>Término</th><th>Qué es</th><th>Ejemplo</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Inteligencia artificial (IA)</strong></td>
+        <td>El campo entero: máquinas que hacen tareas que asociamos a la inteligencia humana.</td>
+        <td>Un programa que juega al ajedrez.</td></tr>
+    <tr><td><strong>Aprendizaje automático</strong> (<em>machine learning</em>)</td>
+        <td>Una parte de la IA. En vez de escribirle las reglas, le damos <strong>muchos ejemplos</strong> y el sistema deduce las reglas solo.</td>
+        <td>Un filtro que aprende a distinguir el correo basura viendo miles de correos.</td></tr>
+    <tr><td><strong>Aprendizaje profundo</strong> (<em>deep learning</em>)</td>
+        <td>Una parte del aprendizaje automático que usa redes neuronales de muchas capas.</td>
+        <td>Reconocer una cara o una voz.</td></tr>
+    <tr><td><strong>IA generativa</strong></td>
+        <td>Aprendizaje profundo que, además de clasificar, <strong>crea</strong> contenido nuevo.</td>
+        <td>Un chatbot que redacta un texto o una herramienta que genera imágenes.</td></tr>
+  </tbody>
+</table>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Lo que vas a construir tú</p>
+  <p>Tu reconocedor de signos será <strong>aprendizaje automático supervisado</strong>: tú le
+  das ejemplos ya etiquetados («esta foto es <em>hola</em>», «esta es <em>gracias</em>») y el
+  sistema aprende a distinguirlos. No es IA generativa: no inventa nada, clasifica.</p>
+</div>
+
+<h2>2. Qué ha cambiado en muy poco tiempo</h2>
+<p>Si le hubieras enseñado a alguien de 2015 lo que hace hoy un móvil, no se lo habría creído.
+Estos son los saltos que han ocurrido:</p>
+
+<div class="marco marco-teoria">
+<svg viewBox="0 0 900 250" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Línea de tiempo de la inteligencia artificial de 2012 a 2026"
+     style="width:100%;height:auto">
+  <line x1="40" y1="130" x2="860" y2="130" stroke="#453f93" stroke-width="3"/>
+  <g font-family="sans-serif" font-size="13" fill="#222">
+    <circle cx="70"  cy="130" r="7" fill="#453f93"/>
+    <text x="70"  y="160" text-anchor="middle" font-weight="bold">2012</text>
+    <text x="70"  y="178" text-anchor="middle">Las redes</text>
+    <text x="70"  y="194" text-anchor="middle">neuronales ganan</text>
+    <text x="70"  y="210" text-anchor="middle">en visión</text>
+
+    <circle cx="240" cy="130" r="7" fill="#453f93"/>
+    <text x="240" y="112" text-anchor="middle" font-weight="bold">2016</text>
+    <text x="240" y="94"  text-anchor="middle">Una IA gana al</text>
+    <text x="240" y="78"  text-anchor="middle">campeón del mundo</text>
+    <text x="240" y="62"  text-anchor="middle">de Go</text>
+
+    <circle cx="420" cy="130" r="7" fill="#453f93"/>
+    <text x="420" y="160" text-anchor="middle" font-weight="bold">2022</text>
+    <text x="420" y="178" text-anchor="middle">Llegan los chatbots</text>
+    <text x="420" y="194" text-anchor="middle">y los generadores</text>
+    <text x="420" y="210" text-anchor="middle">de imágenes</text>
+
+    <circle cx="610" cy="130" r="7" fill="#453f93"/>
+    <text x="610" y="112" text-anchor="middle" font-weight="bold">2024</text>
+    <text x="610" y="94"  text-anchor="middle">Asistentes que ven,</text>
+    <text x="610" y="78"  text-anchor="middle">oyen y hablan</text>
+    <text x="610" y="62"  text-anchor="middle">en tiempo real</text>
+
+    <circle cx="820" cy="130" r="9" fill="#c0392b"/>
+    <text x="820" y="160" text-anchor="middle" font-weight="bold">2026</text>
+    <text x="820" y="178" text-anchor="middle">IA dentro del móvil</text>
+    <text x="820" y="194" text-anchor="middle">y «agentes» que</text>
+    <text x="820" y="210" text-anchor="middle">hacen tareas solos</text>
+  </g>
+</svg>
+</div>
+
+<p>El cambio más reciente merece un nombre propio: los <strong>agentes de IA</strong>. Un
+chatbot responde; un agente <em>actúa</em>: busca, rellena, reserva, encadena tareas. Ya no es
+solo una app que abres, sino algo integrado en el sistema del móvil.</p>
+
+<figure>
+  <img src="../content/resources/tablero_go.jpg" alt="Tablero del juego del Go con fichas blancas y negras">
+  <figcaption>En 2016 una IA venció al campeón mundial de Go, un juego con más partidas
+  posibles que átomos hay en el universo observable. No lo consiguió con reglas escritas a
+  mano: lo consiguió <strong>jugando millones de partidas contra sí misma</strong>.
+  Volveremos a esta idea en la S6.</figcaption>
+</figure>
+
+<h2>3. La diferencia que lo explica todo</h2>
+<p>Imagina que quieres un programa que salude cuando alguien escribe un saludo. Hay dos maneras
+de hacerlo:</p>
+
+<table class="tabla-datos">
+  <thead><tr><th></th><th>Programar paso a paso</th><th>Enseñar con datos</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Qué haces</strong></td>
+        <td>Escribes tú las reglas: «si el texto es <em>hola</em>, <em>buenas</em> o <em>qué tal</em>, entonces saluda».</td>
+        <td>Le das cientos de ejemplos etiquetados como «saludo» y «no saludo». Las reglas las encuentra el programa.</td></tr>
+    <tr><td><strong>Quién decide</strong></td><td>La persona que programa.</td><td>Los datos.</td></tr>
+    <tr><td><strong>Qué pasa con un caso nuevo</strong></td>
+        <td>Si no está en tu lista («ola k ase», «wenas»), falla.</td>
+        <td>Puede acertar aunque no lo haya visto nunca: eso se llama <strong>generalizar</strong>.</td></tr>
+    <tr><td><strong>Cuándo conviene</strong></td>
+        <td>Cuando las reglas son pocas y claras (calcular un IVA, ordenar una lista).</td>
+        <td>Cuando las reglas son imposibles de escribir (reconocer una cara, una voz, un signo).</td></tr>
+  </tbody>
+</table>
+
+<div class="marco marco-formula">
+  <p class="marco-titulo">La frase que resume la unidad</p>
+  <p>Programar paso a paso es <strong>decirle a la máquina qué tiene que hacer</strong>.
+  El aprendizaje automático es <strong>enseñarle con ejemplos hasta que lo deduzca sola</strong>.</p>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Actividad 1 — ¿Reglas o datos?</p>
+  <p>Para cada tarea, decide si la resolverías <strong>programando paso a paso</strong> o
+  <strong>enseñando con datos</strong>, y explica por qué en una frase:</p>
+  <ol>
+    <li>Calcular la nota media de una evaluación.</li>
+    <li>Decidir si en una foto hay un perro o un gato.</li>
+    <li>Convertir euros a dólares.</li>
+    <li>Saber si un comentario de una red social es un insulto.</li>
+    <li>Ordenar alfabéticamente una lista de nombres.</li>
+    <li>Reconocer qué signo de la lengua de signos está haciendo una mano.</li>
+  </ol>
+  <p><strong>Pista:</strong> pregúntate si serías capaz de escribir tú todas las reglas. Si la
+  respuesta es «imposible», toca aprendizaje automático.</p>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Actividad 2 — Caza la IA en tu día</p>
+  <p>Piensa en un día normal desde que suena el despertador. Escribe <strong>cinco</strong>
+  momentos en los que has usado inteligencia artificial sin darte cuenta. Para cada uno indica:
+  qué hace la IA, qué datos crees que necesita y qué pasaría si se equivocase.</p>
+  <p><em>Para ir más allá:</em> de tus cinco ejemplos, ¿en cuántos has <strong>elegido tú</strong>
+  usar la IA y en cuántos estaba ya funcionando sin que nadie te preguntara?</p>
+</div>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Vocabulario de la sesión</p>
+  <ul>
+    <li><strong>Inteligencia artificial:</strong> programas que realizan tareas para las que normalmente hace falta inteligencia humana.</li>
+    <li><strong>Aprendizaje automático:</strong> rama de la IA en la que el programa aprende patrones a partir de datos de ejemplo, en vez de seguir reglas escritas a mano.</li>
+    <li><strong>Modelo:</strong> el resultado del aprendizaje. Es lo que «sabe» la máquina después de entrenar.</li>
+    <li><strong>Generalizar:</strong> acertar con ejemplos nuevos, que no se usaron para entrenar.</li>
+  </ul>
+</div>
+</div>
+</div>
+</article><article id="block-ms5sy64q-92snv7a18" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Test</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1785312469897-0hck93j9t" class="idevice_node quick-questions" data-idevice-path="../idevices/quick-questions/" data-idevice-type="quick-questions">
+<div class="quext-IDevice"><div class="game-evaluation-ids js-hidden" data-id="idevice-1785312469897-0hck93j9t" data-evaluationb="false" data-evaluationid="ba045cdc-0c42-4929-9f1a-60ed64d395a5"></div><div class="quext-instructions QXTP-instructions"><p>Elige la respuesta correcta</p></div><div class="quext-version js-hidden">2</div><div class="quext-feedback-game"></div><div class="quext-DataGame js-hidden">%E9%B0%F3%E1%FB%F5%FC%F3%E6%E7%E0%F3%B0%A8%B0%B0%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%E7%E6%FA%FD%E0%C4%FB%F6%F7%FD%B0%A8%B0%B0%BE%B0%E6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B0%C3%E7%D7%EA%E6%B0%BE%B0%F7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%FB%F6%C4%FB%F6%F7%FD%B0%A8%B0%B0%BE%B0%E1%E6%F3%E0%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%D7%EA%F7%B0%A8%B0%B7%A1%D1%E2%B7%A1%D7%D7%FE%FB%F5%F7%B7%A0%A2%FE%F3%B7%A0%A2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B7%A0%A2%F1%FD%E0%E0%F7%F1%E6%F3%B7%A1%D1%BD%E2%B7%A1%D7%B0%BE%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%B0%A8%B0%D7%FE%FB%F8%F3%B2%FE%F3%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B2%F1%FD%E0%E0%F7%F1%E6%F3%B2%B0%BE%B0%E1%FA%FD%E5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%FD%E2%E6%FB%FD%FC%E1%C0%F3%FF%F6%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%F3%FC%E1%E5%F7%E0%E1%C0%F3%FF%F6%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%E1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%E6%FB%FF%F7%C1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A1%BE%B0%E7%E1%F7%DE%FB%E4%F7%E1%B0%A8%E6%E0%E7%F7%BE%B0%FC%E7%FF%F0%F7%E0%DE%FB%E4%F7%E1%B0%A8%A1%BE%B0%FB%E6%FB%FC%F7%E0%F3%E0%EB%B0%A8%E9%B0%E1%FA%FD%E5%D1%FE%E7%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%F1%FE%E7%F7%D5%F3%FF%F7%B0%A8%B0%B0%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F5%F7%D1%FE%E7%F7%B0%A8%A6%A2%BE%B0%E1%FA%FD%E5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%F4%F3%FE%E1%F7%BE%B0%F1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%B0%BE%B0%FF%F7%E1%E1%F3%F5%F7%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%B0%EF%BE%B0%E3%E7%F7%E1%E6%FB%FD%FC%E1%D5%F3%FF%F7%B0%A8%C9%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%D1%E7s%FE%B2%F6%F7%B2%F7%E1%E6%FD%E1%B2%F7%E1%B2%E7%FC%B2%F7%F8%F7%FF%E2%FE%FD%B2%F6%F7%B2%F3%E2%E0%F7%FC%F6%FB%E8%F3%F8%F7%B2%F3%E7%E6%FD%FFs%E6%FB%F1%FD%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%C7%FC%F3%B2%F1%F3%FE%F1%E7%FE%F3%F6%FD%E0%F3%B0%BE%B0%C7%FC%B2%F4%FB%FE%E6%E0%FD%B2%E3%E7%F7%B2%F3%E2%E0%F7%FC%F6%F7%B2%F3%B2%F6%F7%E6%F7%F1%E6%F3%E0%B2%F1%FD%E0%E0%F7%FD%B2%F0%F3%E1%E7%E0%F3%B2%E4%FB%F7%FC%F6%FD%B2%FF%FB%FE%F7%E1%B2%F6%F7%B2%F1%FD%E0%E0%F7%FD%E1%B0%BE%B0%C7%FC%B2%E0%F7%FE%FD%F8%B2%F6%FB%F5%FB%E6%F3%FE%B0%BE%B0%C7%FC%F3%B2%FA%FD%F8%F3%B2%F6%F7%B2%F1s%FE%F1%E7%FE%FD%B2%F1%FD%FC%B2%F4a%E0%FF%E7%FE%F3%E1%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A3%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%D7%EA%F3%F1%E6%FD%A8%B2%F3%E2%E0%F7%FC%F6%F7%B2%F6%F7%B2%F7%F8%F7%FF%E2%FE%FD%E1%BE%B2%FC%F3%F6%FB%F7%B2%FE%F7%B2%F7%E1%F1%E0%FB%F0%FBa%B2%FE%F3%E1%B2%E0%F7%F5%FE%F3%E1%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%D7%FC%B2%FE%FD%E1%B2%FD%E6%E0%FD%E1%B2%E6%E0%F7%E1%B2%F3%FE%F5%E7%FB%F7%FC%B2%F7%E1%F1%E0%FB%F0%FBa%B2%E6%FD%F6%F3%E1%B2%FE%F3%E1%B2%E0%F7%F5%FE%F3%E1%B2%F3%B2%FF%F3%FC%FD%BC%B2%D3%E2%E0%F7%FC%F6%FB%E8%F3%F8%F7%B2%F3%E7%E6%FD%FFs%E6%FB%F1%FD%B2%AF%B2%F3%E2%E0%F7%FC%F6%F7%E0%B2%F6%F7%B2%F7%F8%F7%FF%E2%FE%FD%E1%BC%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%C7%FC%B2%F1%FA%F3%E6%F0%FD%E6%B2%E3%E7%F7%B2%E0%F7%F6%F3%F1%E6%F3%B2%E7%FC%B2%E6%F7%EA%E6%FD%B2%FC%E7%F7%E4%FD%B2%F7%E1%B2%E7%FC%B2%F1%F3%E1%FD%B2%F6%F7%u20B4%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%C2%E0%FD%F5%E0%F3%FF%F3%F1%FBa%FC%B2%E1%F7%F1%E7%F7%FC%F1%FB%F3%FE%B0%BE%B0%DB%D3%B2%F5%F7%FC%F7%E0%F3%E6%FB%E4%F3%B0%BE%B0%D0%F3%E1%F7%B2%F6%F7%B2%F6%F3%E6%FD%E1%B0%BE%B0%DA%FD%F8%F3%B2%F6%F7%B2%F1s%FE%F1%E7%FE%FD%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A3%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%C1%7F%A8%B2%F3%F6%F7%FFs%E1%B2%F6%F7%B2%F1%FE%F3%E1%FB%F4%FB%F1%F3%E0%BE%B2%F1%E0%F7%F3%B2%F1%FD%FC%E6%F7%FC%FB%F6%FD%B2%FC%E7%F7%E4%FD%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%D4%7F%F8%F3%E6%F7%B2%F7%FC%B2%F7%FE%B2%E4%F7%E0%F0%FD%A8%B2%FC%FD%B2%F1%FE%F3%E1%FB%F4%FB%F1%F3%BE%B2%F1%E0%F7%F3%BC%B2%D7%E1%FD%B2%F7%E1%B2%DB%D3%B2%F5%F7%FC%F7%E0%F3%E6%FB%E4%F3%BC%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%C2%FD%E0%B2%E3%E7%7B%B2%FC%FD%B2%E1%F7%B2%E2%E7%F7%F6%F7%B29%E2%E0%FD%F5%E0%F3%FF%F3%E0%B2%E2%F3%E1%FD%B2%F3%B2%E2%F3%E1%FD%29%B2%F7%FE%B2%E0%F7%F1%FD%FC%FD%F1%FB%FF%FB%F7%FC%E6%FD%B2%F6%F7%B2%E7%FC%B2%E1%FB%F5%FC%FD%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%C2%FD%E0%E3%E7%F7%B2%E4%F3%B2%FF%E7%EB%B2%FE%F7%FC%E6%FD%B2%E2%F3%E0%F3%B2%E6%F3%FC%E6%FD%E1%B2%E1%FB%F5%FC%FD%E1%B0%BE%B0%C2%FD%E0%E3%E7%F7%B2%FC%FD%B2%F7%EA%FB%E1%E6%F7%B2%FC%FB%FC%F5h%FC%B2%FE%F7%FC%F5%E7%F3%F8%F7%B2%F6%F7%B2%E2%E0%FD%F5%E0%F3%FF%F3%F1%FBa%FC%B2%F3%F6%F7%F1%E7%F3%F6%FD%B0%BE%B0%C2%FD%E0%E3%E7%F7%B2%E1%F7%E0%7F%F3%B2%FB%FF%E2%FD%E1%FB%F0%FE%F7%B2%F7%E1%F1%E0%FB%F0%FB%E0%B2%E6%FD%F6%F3%E1%B2%FE%F3%E1%B2%E0%F7%F5%FE%F3%E1%B2%F6%F7%B2%E6%FD%F6%F3%E1%B2%FE%F3%E1%B2%FF%F3%FC%FD%E1%BE%B2%FE%E7%F1%F7%E1%B2%EB%B2s%FC%F5%E7%FE%FD%E1%B0%BE%B0%C2%FD%E0%E3%E7%F7%B2%F7%E1%E6s%B2%E2%E0%FD%FA%FB%F0%FB%F6%FD%B2%E2%FD%E0%B2%FE%FD%E1%B2%F6%F7%E0%F7%F1%FA%FD%E1%B2%F6%F7%B2%F3%E7%E6%FD%E0%B2%F6%F7%B2%FE%F3%E1%B2%FB%FFs%F5%F7%FC%F7%E1%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A0%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%D8%E7%E1%E6%FD%A8%B2%F7%FE%B2%E2%E0%FD%F0%FE%F7%FF%F3%B2%FC%FD%B2%F7%E1%B2%F6%F7%B2%E4%F7%FE%FD%F1%FB%F6%F3%F6%BE%B2%F7%E1%B2%F6%F7%B2%FB%FF%E2%FD%E1%FB%F0%FB%FE%FB%F6%F3%F6%B2%E2%E0s%F1%E6%FB%F1%F3%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%DC%FD%B2%F7%E1%B2%F1%E7%F7%E1%E6%FBa%FC%B2%F6%F7%B2%E4%F7%FE%FD%F1%FB%F6%F3%F6%B2%FC%FB%B2%F6%F7%B2%E2%F7%E0%FF%FB%E1%FD%A8%B2%FC%F3%F6%FB%F7%B2%E1%F3%F0%E0%7F%F3%B2%F7%E1%F1%E0%FB%F0%FB%E0%B2%F7%E1%F3%E1%B2%E0%F7%F5%FE%F3%E1%BC%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%DE%F3%B2%DB%D3%B2%E3%E7%F7%B2%F5%F3%FCa%B2%F3%FE%B2%F1%F3%FF%E2%F7a%FC%B2%FF%E7%FC%F6%FB%F3%FE%B2%F6%F7%B2%D5%FD%B2%F3%E2%E0%F7%FC%F6%FBa%u20B4%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%D1%FD%FC%B2%E0%F7%F5%FE%F3%E1%B2%F7%E1%F1%E0%FB%E6%F3%E1%B2%E2%FD%E0%B2%FF%F3%F7%E1%E6%E0%FD%E1%B2%F6%F7%FE%B2%F8%E7%F7%F5%FD%B0%BE%B0%D8%E7%F5%F3%FC%F6%FD%B2%FF%FB%FE%FE%FD%FC%F7%E1%B2%F6%F7%B2%E2%F3%E0%E6%FB%F6%F3%E1%B0%BE%B0%D1%FD%E2%FB%F3%FC%F6%FD%B2%E2%F3%E0%E6%FB%F6%F3%E1%B2%F6%F7%B2%FB%FC%E6%F7%E0%FC%F7%E6%B2%E1%FD%FE%F3%FF%F7%FC%E6%F7%B0%BE%B0%DC%FD%B2%F3%E2%E0%F7%FC%F6%FBa%BE%B2%FB%F0%F3%B2%E2%E0%FD%F5%E0%F3%FF%F3%F6%F3%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A3%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%D1%FD%E0%E0%F7%F1%E6%FD%BE%B2%EB%B2%FE%FD%B2%E4%F7%E0%F7%FF%FD%E1%B2%FD%E6%E0%F3%B2%E4%F7%E8%B2%F7%FC%B2%FE%F3%B2%C1%A4%B2%BA%F3%E2%E0%F7%FC%F6%FB%E8%F3%F8%F7%B2%E2%FD%E0%B2%E0%F7%F4%E7%F7%E0%E8%FD%BB%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%DC%FB%FC%F5%E7%FC%F3%B2%E2%F7%E0%E1%FD%FC%F3%B2%F7%E1%F1%E0%FB%F0%FBa%B2%F7%E1%F3%E1%B2%E0%F7%F5%FE%F3%E1%A8%B2%FE%F3%B2%FFs%E3%E7%FB%FC%F3%B2%FE%F3%E1%B2%F6%F7%E1%F1%E7%F0%E0%FBa%B2%F8%E7%F5%F3%FC%F6%FD%BC%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A2%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%C7%FC%B29%FF%FD%F6%F7%FE%FD%29%B2%F7%FC%B2%F3%E2%E0%F7%FC%F6%FB%E8%F3%F8%F7%B2%F3%E7%E6%FD%FFs%E6%FB%F1%FD%B2%F7%E1%u20B4%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%D7%FE%B2%FD%E0%F6%F7%FC%F3%F6%FD%E0%B0%BE%B0%DE%F3%E1%B2%FB%FFs%F5%F7%FC%F7%E1%B2%F6%F7%B2%F7%F8%F7%FF%E2%FE%FD%B0%BE%B0%DE%FD%B2%E3%E7%F7%B2%FE%F3%B2%FFs%E3%E7%FB%FC%F3%B2%FA%F3%B2%F3%E2%E0%F7%FC%F6%FB%F6%FD%B2%E6%E0%F3%E1%B2%F7%FC%E6%E0%F7%FC%F3%E0%B0%BE%B0%DE%F3%B2%E2%F7%E0%E1%FD%FC%F3%B2%E3%E7%F7%B2%F7%E6%FB%E3%E7%F7%E6%F3%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A0%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%D0%FB%F7%FC%A8%B2%FE%FD%E1%B2%F7%F8%F7%FF%E2%FE%FD%E1%B2%F7%FC%E6%E0%F3%FC%BE%B2%F7%FE%B2%FF%FD%F6%F7%FE%FD%B2%E1%F3%FE%F7%BC%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%DE%F3%E1%B2%FB%FFs%F5%F7%FC%F7%E1%B2%E1%FD%FC%B2%FE%F3%B2%F7%FC%E6%E0%F3%F6%F3%BC%B2%D7%FE%B2%FF%FD%F6%F7%FE%FD%B2%F7%E1%B2%F7%FE%B2%E0%F7%E1%E7%FE%E6%F3%F6%FD%B2%F6%F7%FE%B2%F7%FC%E6%E0%F7%FC%F3%FF%FB%F7%FC%E6%FD%BC%B0%EF%CF%BE%B0%FB%E1%C1%F1%FD%E0%FF%B0%A8%A2%BE%B0%E6%F7%EA%E6%D0%E7%E6%E6%FD%FC%C1%F1%FD%E0%FF%B0%A8%B0%D5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%E0%F7%E2%F7%F3%E6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%E6%E0%E7%F7%BE%B0%E5%F7%FB%F5%FA%E6%F7%F6%B0%A8%A3%A2%A2%BE%B0%E6%FB%E6%FE%F7%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%E6%F7%EA%E6%D3%F4%E6%F7%E0%B0%A8%B0%B0%BE%B0%E6%F7%EA%E6%D4%F7%F7%F6%D0%F3%F1%F9%B0%A8%B0%B0%BE%B0%F5%F3%FF%F7%DF%FD%F6%F7%B0%A8%A3%BE%B0%F4%F7%F7%F6%D0%F3%F1%F9%B0%A8%F4%F3%FE%E1%F7%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%D4%D0%B0%A8%A3%A2%A2%BE%B0%E4%F7%E0%E1%FB%FD%FC%B0%A8%A0%BE%B0%F1%E7%E1%E6%FD%FF%DF%F7%E1%E1%F3%F5%F7%E1%B0%A8%E6%E0%E7%F7%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%A3%A2%A2%BE%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%B0%A8%F4%F3%FE%E1%F7%BE%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%DB%D6%B0%A8%B0%F0%F3%A2%A6%A7%F1%F6%F1%BF%A2%F1%A6%A0%BF%A6%AB%A0%AB%BF%AB%F4%A3%F3%BF%A4%A2%F7%F6%A4%A6%F6%A1%AB%A7%F3%A7%B0%BE%B0%F5%FE%FD%F0%F3%FE%C6%FB%FF%F7%B0%A8%A2%BE%B0%FB%F6%B0%A8%B0%FB%F6%F7%E4%FB%F1%F7%BF%A3%A5%AA%A7%A1%A3%A0%A6%A4%AB%AA%AB%A5%BF%A2%FA%F1%F9%AB%A1%F8%AB%E6%B0%BE%B0%FF%E1%F5%E1%B0%A8%E9%B0%FF%E1%F5%C1%E6%F3%E0%E6%D5%F3%FF%F7%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B0%BE%B0%FF%E1%F5%C1%E7%F0%FF%FB%E6%B0%A8%B0%D7%FC%E4%FB%F3%E0%B0%BE%B0%FF%E1%F5%D1%FE%E7%F7%B0%A8%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%E2%FB%E1%E6%F3%B2%F7%E1%A8%B0%BE%B0%FF%E1%F5%DC%F7%E5%D5%F3%FF%F7%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B2%FD%E6%E0%F3%B2%E2%F3%E0%E6%FB%F6%F3%B0%BE%B0%FF%E1%F5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%D1a%F6%FB%F5%FD%B2%F6%F7%B2%F3%F1%F1%F7%E1%FD%B0%BE%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%DE%FD%FD%F9%FB%FC%F5%B0%A8%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%F7%E1%E6%F3%F0%F3%B2%F0%E7%E1%F1%F3%FC%F6%FD%B0%BE%B0%FF%E1%F5%C2%FE%F3%EB%C1%E6%F3%E0%E6%B0%A8%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F8%E7%F5%F3%E0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%E1%B0%A8%B0%D7%E0%E0%FD%E0%F7%E1%B0%BE%B0%FF%E1%F5%DA%FB%E6%E1%B0%A8%B0%D3%F1%FB%F7%E0%E6%FD%E1%B0%BE%B0%FF%E1%F5%C1%F1%FD%E0%F7%B0%A8%B0%C2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C5%F7%FB%F5%FA%E6%B0%A8%B0%C2%F7%E1%FD%B0%BE%B0%FF%E1%F5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%B0%DF%FB%FC%FB%FF%FB%E8%F3%E0%B0%BE%B0%FF%E1%F5%DF%F3%EA%FB%FF%FB%E8%F7%B0%A8%B0%DF%F3%EA%FB%FF%FB%E8%F3%E0%B0%BE%B0%FF%E1%F5%C6%FB%FF%F7%B0%A8%B0%C6%FB%F7%FF%E2%FD%B2%E2%FD%E0%B2%E2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B0%FF%E1%F5%DE%FB%E4%F7%B0%A8%B0%C4%FB%F6%F3%B0%BE%B0%FF%E1%F5%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B0%C2%F3%FC%E6%F3%FE%FE%F3%B2%D1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B0%FF%E1%F5%D7%EA%FB%E6%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B0%C1%F3%FE%FB%E0%B2%F6%F7%FE%B2%FF%FD%F6%FD%B2%E2%F3%FC%E6%F3%FE%FE%F3%B2%F1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B0%FF%E1%F5%DC%E7%FF%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B0%DCh%FF%F7%E0%FD%B2%F6%F7%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B0%BE%B0%FF%E1%F5%DC%FD%DB%FF%F3%F5%F7%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%B2%E1%FB%FC%B2%FB%FFs%F5%F7%FC%F7%E1%B0%BE%B0%FF%E1%F5%D1%FD%FD%FE%B0%A8%B03%D0%FB%F7%FC%B3%B0%BE%B0%FF%E1%F5%DE%FD%E1%F7%C6%B0%A8%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%A1%A1%A2%B2%E2%E7%FC%E6%FD%E1%B0%BE%B0%FF%E1%F5%DE%FD%E1%F7%DE%FB%E4%F7%B0%A8%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E7%FC%F3%B2%E4%FB%F6%F3%B0%BE%B0%FF%E1%F5%DE%FD%E1%E6%DE%FB%E4%F7%E1%B0%A8%B03%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E6%FD%F6%F3%E1%B2%E1%E7%E1%B2%E4%FB%F6%F3%E1%B3%B0%BE%B0%FF%E1%F5%D3%FE%FE%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B03%D1%FD%FF%E2%FE%F7%E6%F3%F6%F3%E1%B2%FE%F3%E1%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B3%B0%BE%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F7%E1%B0%A8%B03%D1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%D7%EA%F1%F7%FE%F7%FC%E6%F7%B3%B2%EE%B23%D5%F7%FC%FB%F3%FE%B3%B2%EE%B23%DF%E7%EB%B2%F0%FB%F7%FC%B3%B2%EE%B23%C2%F7%E0%F4%F7%F1%E6%FD%B3%B0%BE%B0%FF%E1%F5%D4%F3%FB%FE%E7%E0%F7%E1%B0%A8%B03%DC%FD%B2%F7%E0%F3%B2%F7%E1%FD%B3%B2%EE%B23%DB%FC%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DC%FD%B2%F7%E1%B2%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DE%FD%B2%E1%F7%FC%E6%FB%FF%FD%E1%B3%B2%EE%B23%D7%E0%E0%FD%E0%B3%B0%BE%B0%FF%E1%F5%C1%F1%FD%E0%F7%C1%F1%FD%E0%FF%B0%A8%B0%DE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%FC%FD%B2%E1%F7%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E2%FD%E0%E3%E7%F7%B2%F7%E1%E6%F3%B2%E2s%F5%FB%FC%F3%B2%FC%FD%B2%F4%FD%E0%FF%F3%B2%E2%F3%E0%E6%F7%B2%B2%F6%F7%B2%E7%FC%B2%E2%F3%E3%E7%F7%E6%F7%B2%C1%D1%DD%C0%DF%BC%B0%BE%B0%FF%E1%F5%C3%E7%F7%E1%E6%FB%FD%FC%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%C1%F1%FD%E0%F7%B0%A8%B03%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E7%FC%F3%B2%E4%F7%E8%B3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%B0%A8%B0%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%B0%BE%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B0%DB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%D3%E7%E6%FA%FD%E0%B0%A8%B0%D3%E7%E6%FD%E0%7F%F3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B2%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F8%E7%F5%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%BC%B0%BE%B0%FF%E1%F5%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F3%E7%E6%FD%FFs%E6%FB%F1%F3%FF%F7%FC%E6%F7%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B0%BE%B0%FF%E1%F5%CB%FD%E7%C1%F1%FD%E0%F7%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C1%F7%E4%F7%E0%F3%FE%C1%F1%FD%E0%F7%B0%A8%B0%C2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E6%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%F1%FD%FF%FD%B2%E3%E7%FB%F7%E0%F3%B0%BE%B0%FF%E1%F5%CB%FD%E7%DE%F3%E1%E6%C1%F1%FD%E0%F7%B0%A8%B0%DE%F3%B2h%FE%E6%FB%FF%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%F5%E7%F3%E0%F6%F3%F6%F3%B2%F7%E1%B0%BE%B0%FF%E1%F5%D3%F1%E6%FB%E6%EB%D1%FD%FF%E2%FE%EB%B0%A8%B0%CB%F3%B2%FA%F3%B2%E0%F7%F3%FE%FB%E8%F3%F6%FD%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%BC%B0%BE%B0%FF%E1%F5%C2%FE%F3%EB%C1%F7%E4%F7%E0%F3%FE%C6%FB%FF%F7%E1%B0%A8%B0%C2%E7%F7%F6%F7%B2%E0%F7%F3%FE%FB%E8%F3%E0%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%B2%F1%E7%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%E3%E7%FB%F7%E0%F3%B0%BE%B0%FF%E1%F5%C6%E0%EB%D3%F5%F3%FB%FC%B0%A8%B0%DC%F7%F1%F7%E1%FB%E6%F3%E1%B2%F3%FE%B2%FF%F7%FC%FD%E1%B2%B7%E1%B7%B2%F6%F7%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%E1%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%B2%E2%F3%E0%F3%B2%FD%F0%E6%F7%FC%F7%E0%B2%FE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%BC%B2%DB%FC%E6%7B%FC%E6%F3%FE%FD%B2%F6%F7%B2%FC%E7%F7%E4%FD%BC%B0%BE%B0%FF%E1%F5%C4%FB%F6%F7%FD%DB%FC%E6%E0%FD%B0%A8%B0%C4%7F%F6%F7%FD%B2%F6%F7%B2%FB%FC%E6%E0%FD%F6%E7%F1%F1%FBa%FC%B0%BE%B0%FF%E1%F5%D1%FE%FD%E1%F7%B0%A8%B0%D1%F7%E0%E0%F3%E0%B0%BE%B0%FF%E1%F5%DD%E2%E6%FB%FD%FC%B0%A8%B0%DD%E2%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C7%E1%F7%D4%E7%FE%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B0%F7%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%E1%F7%E0s%B2%FF%E7%EB%B2h%E6%FB%FE%B0%BE%B0%FF%E1%F5%DE%FD%F3%F6%FB%FC%F5%B0%A8%B0%D1%F3%E0%F5%F3%FC%F6%FD%BC%B2%D7%E1%E2%F7%E0%F7%BE%B2%E2%FD%E0%B2%F4%F3%E4%FD%E0%BC%BC%BC%B0%BE%B0%FF%E1%F5%C2%FD%FB%FC%E6%E1%B0%A8%B0%E2%E7%FC%E6%FD%E1%B0%BE%B0%FF%E1%F5%D3%E7%F6%FB%FD%B0%A8%B0%D3%E7%F6%FB%FD%B0%BE%B0%FF%E1%F5%D7%FC%F6%D5%F3%FF%F7%C1%F1%FD%E0%F7%B0%A8%B0%DB%FC%FB%F1%FB%F3%B2%F7%FE%B2%F8%E7%F7%F5%FD%BC%BC%BC%B0%BE%B0%FF%E1%F5%C7%FC%F1%FD%FF%E2%FE%F7%E6%F7%F6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%F1%FD%FF%E2%FE%F7%E6%F3%F6%F3%B0%BE%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B0%FF%E1%F5%C7%FC%E1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B0%FF%E1%F5%C6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%E1%B2%E0s%E2%FB%F6%F3%E1%B0%EF%EF</div><div class="quext-bns js-hidden">Su navegador no es compatible con esta herramienta.</div></div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../index.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s2-datos-y-metadatos.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - non commercial - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

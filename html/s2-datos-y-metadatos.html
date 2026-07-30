@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-20260728120000PAGE02">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S2 · Datos y metadatos | Enseña a la máquina: datos, sesgos e inteligencia artificial</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Unidad de inteligencia artificial y Big Data para 3.º de ESO (Computación y Robótica): datos y metadatos, scraping, aprendizaje automático supervisado con LearningML, aprendizaje por refuerzo y reflexión sobre sesgos y ética de la IA. Reto: reconocedor de signos de la lengua de signos española.">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260728120000BD3SDA06","packageTitle":"Enseña a la máquina: datos, sesgos e inteligencia artificial","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../idevices/trueorfalse/trueorfalse.js"></script><link rel="stylesheet" href="../idevices/trueorfalse/trueorfalse.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#20260728120000PAGE02" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Inicio</a>
+</li>
+<li> <a href="../html/s1-la-ia-que-ya-usas.html" class="no-ch">S1 · La IA que ya usas</a>
+</li>
+<li class="active"> <a href="../html/s2-datos-y-metadatos.html" class="active no-ch">S2 · Datos y metadatos</a>
+</li>
+<li> <a href="../html/s3-como-aprende-a-ver.html" class="no-ch">S3 · Cómo aprende a ver</a>
+</li>
+<li> <a href="../html/s4-tu-primer-modelo.html" class="no-ch">S4 · Tu primer modelo</a>
+</li>
+<li> <a href="../html/s5-vuestros-signos.html" class="no-ch">S5 · Vuestros signos</a>
+</li>
+<li> <a href="../html/s6-entrenar-y-aprender-por-refuerzo.html" class="no-ch">S6 · Entrenar y aprender por refuerzo</a>
+</li>
+<li> <a href="../html/s7-demo-sesgos-y-etica.html" class="no-ch">S7 · Demo, sesgos y ética</a>
+</li>
+<li> <a href="../html/chuleta.html" class="no-ch">Chuleta</a>
+</li>
+<li> <a href="../html/para-ir-mas-alla.html" class="no-ch">Para ir más allá</a>
+</li>
+</ul>
+</nav><main id="20260728120000PAGE02" class="page"> 
+<header class="main-header"> <p class="page-counter"> <span class="page-counter-label">Página </span><span class="page-counter-content"> <strong class="page-counter-current-page">3</strong><span class="page-counter-sep">/</span><strong class="page-counter-total">10</strong></span></p>
+
+<div class="package-header"><p class="package-title">Enseña a la máquina: datos, sesgos e inteligencia artificial</p></div>
+<div class="page-header"><h1 class="page-title">S2 · Datos y metadatos</h1></div>
+</header><div id="page-content-20260728120000PAGE02" class="page-content">
+<article id="20260728120000BLK002" class="box no-header">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="20260728120000IDEV002" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;20260728120000IDEV002&quot;}">
+<div class="bloque bloque-teoria">
+  <p class="bloque-titulo">De qué va esta sesión</p>
+  <p>En la S1 quedó claro que la IA de hoy aprende de datos. Bien: <strong>¿de qué datos?
+  ¿de dónde salen? ¿son tuyos?</strong> Hoy vas a mirar debajo de la alfombra. Al final de la
+  sesión harás el <strong>cuestionario</strong> de esta primera parte de la unidad.</p>
+</div>
+
+<h2>1. Cuántos datos hay ahí fuera</h2>
+<figure><img src="../content/resources/nube_big_data.jpg" alt="Nube de palabras con el término Big Data en el centro"></figure>
+
+<p>Los números son difíciles de imaginar:</p>
+<ul>
+  <li>La humanidad genera del orden de <strong>180 zettabytes</strong> de datos al año. Un
+  zettabyte es un 1 seguido de 21 ceros en bytes. Si cada byte fuera un grano de arroz,
+  esos 180 zettabytes formarían una capa de <strong>varios metros de espesor sobre toda la
+  superficie de la Tierra</strong>, mares incluidos.</li>
+  <li>Hay más de <strong>5.500 millones de personas</strong> conectadas a internet, y cada una
+  deja rastro continuamente.</li>
+  <li>Cada minuto se suben cientos de horas de vídeo, se envían cientos de millones de mensajes
+  y se hacen millones de búsquedas.</li>
+</ul>
+
+<p>A esa acumulación enorme de datos, imposible de manejar con las herramientas de siempre, se
+la llama <strong>Big Data</strong>. Y se define por unas cuantas características que empiezan
+por «V»:</p>
+
+<div class="marco marco-teoria">
+<svg viewBox="0 0 880 200" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Las cinco V del Big Data: volumen, velocidad, variedad, veracidad y valor"
+     style="width:100%;height:auto">
+  <g font-family="sans-serif" text-anchor="middle">
+    <g>
+      <rect x="10"  y="20" width="160" height="150" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+      <text x="90"  y="55" font-size="19" font-weight="bold" fill="#453f93">Volumen</text>
+      <text x="90"  y="88" font-size="13" fill="#222">Cantidad</text>
+      <text x="90"  y="106" font-size="13" fill="#222">enorme de</text>
+      <text x="90"  y="124" font-size="13" fill="#222">datos</text>
+    </g>
+    <g>
+      <rect x="185" y="20" width="160" height="150" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+      <text x="265" y="55" font-size="19" font-weight="bold" fill="#453f93">Velocidad</text>
+      <text x="265" y="88" font-size="13" fill="#222">Se generan y</text>
+      <text x="265" y="106" font-size="13" fill="#222">procesan casi</text>
+      <text x="265" y="124" font-size="13" fill="#222">al instante</text>
+    </g>
+    <g>
+      <rect x="360" y="20" width="160" height="150" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+      <text x="440" y="55" font-size="19" font-weight="bold" fill="#453f93">Variedad</text>
+      <text x="440" y="88" font-size="13" fill="#222">Texto, imagen,</text>
+      <text x="440" y="106" font-size="13" fill="#222">vídeo, sonido,</text>
+      <text x="440" y="124" font-size="13" fill="#222">sensores…</text>
+    </g>
+    <g>
+      <rect x="535" y="20" width="160" height="150" rx="10" fill="#efedf8" stroke="#453f93" stroke-width="2"/>
+      <text x="615" y="55" font-size="19" font-weight="bold" fill="#453f93">Veracidad</text>
+      <text x="615" y="88" font-size="13" fill="#222">¿Son fiables?</text>
+      <text x="615" y="106" font-size="13" fill="#222">¿Están</text>
+      <text x="615" y="124" font-size="13" fill="#222">sesgados?</text>
+    </g>
+    <g>
+      <rect x="710" y="20" width="160" height="150" rx="10" fill="#fdf0e6" stroke="#d35400" stroke-width="2"/>
+      <text x="790" y="55" font-size="19" font-weight="bold" fill="#d35400">Valor</text>
+      <text x="790" y="88" font-size="13" fill="#222">De qué sirven:</text>
+      <text x="790" y="106" font-size="13" fill="#222">sin esto, solo</text>
+      <text x="790" y="124" font-size="13" fill="#222">ocupan sitio</text>
+    </g>
+  </g>
+</svg>
+</div>
+
+<p>Verás formulaciones con seis o siete «V» según el autor; las <strong>cinco de arriba</strong>
+son las que aparecen en casi todas.</p>
+
+<h2>2. Dato y metadato</h2>
+<p>Un <strong>dato</strong> es una pieza de información. Un <strong>metadato</strong> es
+información <em>sobre</em> ese dato: quién lo creó, cuándo, dónde, con qué aparato, cuánto
+ocupa.</p>
+
+<div class="marco marco-formula">
+  <p class="marco-titulo">Ejemplo</p>
+  <p><strong>Dato:</strong> la foto que hiciste ayer del patio.<br>
+  <strong>Metadatos de esa foto:</strong> fecha y hora exactas, modelo del móvil, apertura del
+  objetivo, si se disparó el flash y —si tenías el GPS activado— las
+  <strong>coordenadas exactas</strong> del sitio desde el que la hiciste.</p>
+</div>
+
+<p>Los metadatos parecen inofensivos y no lo son. Una foto publicada en una red social puede
+delatar dónde vives aunque en la imagen no aparezca ninguna dirección. Los metadatos de tus
+mensajes (quién habla con quién, cuándo y cuánto rato) revelan tu círculo de amistades incluso
+si nadie lee el contenido.</p>
+
+<table class="tabla-datos">
+  <thead><tr><th>Objeto</th><th>El dato</th><th>Algunos metadatos</th></tr></thead>
+  <tbody>
+    <tr><td>Una foto</td><td>La imagen</td><td>Fecha, hora, modelo de cámara, GPS, resolución</td></tr>
+    <tr><td>Un mensaje</td><td>El texto</td><td>Emisor, receptor, hora de envío, hora de lectura</td></tr>
+    <tr><td>Un vídeo de una plataforma</td><td>El vídeo</td><td>Duración, quién lo vio, cuántos segundos aguantó cada persona</td></tr>
+    <tr><td>Un documento de texto</td><td>El contenido</td><td>Autoría, fecha de creación, número de revisiones</td></tr>
+  </tbody>
+</table>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Actividad 3 — Destripa los metadatos de una foto</p>
+  <p>Vamos a mirar los metadatos de una imagen con
+  <a href="https://eraseexif.com/" target="_blank" rel="noopener">EraseEXIF</a>, una herramienta
+  web que <strong>procesa la imagen en tu propio navegador</strong>: la foto no se sube a
+  ningún servidor.</p>
+  <ol>
+    <li>Descarga la <strong>foto de ejemplo</strong> que hay en la tarea de Classroom (tiene
+    metadatos completos, incluida la posición GPS).</li>
+    <li>Ábrela en EraseEXIF y busca: fecha, modelo de cámara y coordenadas.</li>
+    <li>Copia las coordenadas en un buscador de mapas. ¿Dónde se hizo la foto?</li>
+    <li>Responde: si esa foto fuera tuya y la subieras a una red social, ¿qué sabría de ti
+    quien la mirase con atención?</li>
+  </ol>
+  <div class="marco marco-nota">
+    <p class="marco-titulo">Importante</p>
+    <p>Usa <strong>la foto de ejemplo</strong>, no fotos tuyas ni de tus compañeros y
+    compañeras. Analizar en clase imágenes propias con datos de localización real es
+    exactamente el error que estamos aprendiendo a evitar.</p>
+  </div>
+  <p><em>Para ir más allá:</em> la mayoría de redes sociales borra los metadatos al publicar,
+  pero no todas, y no los borra cuando envías la foto como archivo por mensajería. Averigua
+  cómo se desactiva la geolocalización de la cámara en un móvil.</p>
+</div>
+
+<h2>3. El ciclo del dato</h2>
+<p>Los datos que alimentan una IA no aparecen por arte de magia. Recorren siempre el mismo
+camino:</p>
+
+<div class="marco marco-teoria">
+<svg viewBox="0 0 900 130" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Ciclo del dato: obtención, almacenamiento, preparación, análisis y decisión"
+     style="width:100%;height:auto">
+  <g font-family="sans-serif" font-size="13" text-anchor="middle">
+    <g fill="#efedf8" stroke="#453f93" stroke-width="2">
+      <rect x="5"   y="35" width="150" height="60" rx="8"/>
+      <rect x="185" y="35" width="150" height="60" rx="8"/>
+      <rect x="365" y="35" width="150" height="60" rx="8"/>
+      <rect x="545" y="35" width="150" height="60" rx="8"/>
+      <rect x="725" y="35" width="170" height="60" rx="8"/>
+    </g>
+    <g fill="#453f93" font-weight="bold">
+      <text x="80"  y="60">1. Obtención</text>
+      <text x="260" y="60">2. Almacenamiento</text>
+      <text x="440" y="60">3. Preparación</text>
+      <text x="620" y="60">4. Análisis</text>
+      <text x="810" y="60">5. Decisión</text>
+    </g>
+    <g fill="#333" font-size="11">
+      <text x="80"  y="80">sensores, formularios,</text>
+      <text x="80"  y="92">rastro digital</text>
+      <text x="260" y="80">bases de datos,</text>
+      <text x="260" y="92">centros de datos</text>
+      <text x="440" y="80">limpiar, etiquetar,</text>
+      <text x="440" y="92">quitar errores</text>
+      <text x="620" y="80">estadística</text>
+      <text x="620" y="92">y algoritmos</text>
+      <text x="810" y="80">alguien (o algo)</text>
+      <text x="810" y="92">actúa</text>
+    </g>
+    <g stroke="#453f93" stroke-width="2" fill="none">
+      <path d="M158 65 h24" marker-end="url(#fl)"/>
+      <path d="M338 65 h24" marker-end="url(#fl)"/>
+      <path d="M518 65 h24" marker-end="url(#fl)"/>
+      <path d="M698 65 h24" marker-end="url(#fl)"/>
+    </g>
+  </g>
+  <defs><marker id="fl" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 z" fill="#453f93"/></marker></defs>
+</svg>
+</div>
+
+<p>Fíjate en el paso 3: <strong>preparar</strong> los datos es casi siempre el trabajo más
+largo. En la S5 te tocará a ti hacerlo, con vuestras imágenes de signos.</p>
+
+<h2>4. Scraping: recoger datos de la web a lo bestia</h2>
+<p>El <strong><em>web scraping</em></strong> («raspado web») consiste en usar un programa que
+recorre páginas de internet de forma automática y copia lo que encuentra: textos, imágenes,
+precios, comentarios. En minutos puede recoger lo que a una persona le llevaría años.</p>
+
+<p>Se usa para cosas útiles —comparadores de precios, buscadores, investigación— y también para
+otras muy discutidas. Lo más sonado de los últimos años: <strong>los grandes modelos de IA se
+han entrenado con cantidades gigantescas de texto e imágenes recogidos así de internet</strong>,
+sin pedir permiso a quien los publicó. De ahí salen las demandas de medios de comunicación,
+artistas y plataformas contra empresas de IA que llenan los titulares.</p>
+
+<div class="marco marco-nota">
+  <p class="marco-titulo">¿Es legal el scraping?</p>
+  <p>Depende, y ahí está el lío. Recoger información pública no es delito en sí mismo, pero:</p>
+  <ul>
+    <li>Si lo que copias tiene <strong>derechos de autor</strong> (un artículo, una foto, una
+    canción), reutilizarlo sin permiso sí puede serlo.</li>
+    <li>Si recoges <strong>datos personales</strong>, se aplica la normativa de protección de
+    datos, y hace falta una base legal para tratarlos.</li>
+    <li>Existe un archivo, <code>robots.txt</code>, con el que una web pide a los robots que no
+    recojan según qué. Es una <strong>petición</strong>: funciona porque las empresas serias
+    deciden respetarla.</li>
+    <li>En Europa, el <strong>Reglamento de Inteligencia Artificial</strong> prohíbe
+    expresamente una forma concreta de scraping: recopilar imágenes de caras de internet o de
+    cámaras de vigilancia para montar bases de datos de reconocimiento facial.</li>
+  </ul>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Actividad 4 — Tres casos, tres decisiones</p>
+  <p>En grupos de tres o cuatro, decidid si cada caso os parece <strong>aceptable</strong>,
+  <strong>discutible</strong> o <strong>inaceptable</strong>, y justificad la respuesta con
+  algún argumento de los de arriba:</p>
+  <ol>
+    <li>Un programa recorre webs de tiendas y guarda los precios para hacer un comparador.</li>
+    <li>Una empresa descarga millones de fotos publicadas por particulares en redes sociales
+    para entrenar una IA que genera imágenes, sin avisar a nadie.</li>
+    <li>Un instituto recopila los trabajos publicados por su alumnado en el blog del centro
+    para hacer una exposición de fin de curso.</li>
+  </ol>
+  <p>Después, comparad: ¿qué es lo que hace que un caso os parezca peor que otro? ¿el
+  <em>quién</em>, el <em>para qué</em> o el <em>con qué permiso</em>?</p>
+</div>
+
+<div class="bloque bloque-actividad">
+  <p class="bloque-titulo">Entrega — Ficha de Big Data (cuestionario)</p>
+  <p>Al final de la sesión responde el cuestionario <strong>«Ficha de Big Data»</strong> que hay
+  en la tarea de Google Classroom. Es individual y cubre lo trabajado en la S1 y la S2: qué es
+  la IA, cómo aprende una máquina, datos y metadatos, Big Data y <em>scraping</em>.</p>
+</div>
+
+<div class="bloque bloque-nota">
+  <p class="bloque-titulo">Tus datos también tienen dueño</p>
+  <p>En España, a partir de los <strong>14 años</strong> puedes dar tú mismo el consentimiento
+  para que traten tus datos personales; por debajo de esa edad tienen que autorizarlo tus
+  padres, madres o tutores legales. Y a cualquier edad tienes derecho a saber qué datos tienen sobre ti,
+  a corregirlos y a pedir que los borren. Si quieres saber más:
+  <a href="https://www.tudecideseninternet.es/" target="_blank" rel="noopener">Tú decides en Internet</a>
+  (Agencia Española de Protección de Datos).</p>
+</div>
+</div>
+</div>
+</article><article id="block-ms5t9wis-0xfirq49j" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Verdadero o falso</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1785313017315-5i36ev3um" class="idevice_node trueorfalse" data-idevice-path="../idevices/trueorfalse/" data-idevice-type="trueorfalse" data-idevice-component-type="json" data-idevice-json-data="{&quot;id&quot;:&quot;idevice-1785313017315-5i36ev3um&quot;,&quot;typeGame&quot;:&quot;TrueOrFalse&quot;,&quot;eXeGameInstructions&quot;:&quot;&lt;p&gt;Responde todas las preguntas del cuestionario.&lt;/p&gt;&quot;,&quot;eXeIdeviceTextAfter&quot;:&quot;&quot;,&quot;msgs&quot;:{&quot;msgStartGame&quot;:&quot;Pulsa aquí para empezar&quot;,&quot;msgTime&quot;:&quot;Tiempo por pregunta&quot;,&quot;msgNoImage&quot;:&quot;Pregunta sin imágenes&quot;,&quot;msgScoreScorm&quot;:&quot;La puntuación no se puede guardar porque esta página no forma parte  de un paquete SCORM.&quot;,&quot;msgEndGameScore&quot;:&quot;Comience la partida antes de guardar la puntuación.&quot;,&quot;msgOnlySaveScore&quot;:&quot;¡Solo puede guardar la puntuación una vez!&quot;,&quot;msgOnlySave&quot;:&quot;Solo puede guardar una vez&quot;,&quot;msgYouScore&quot;:&quot;Su puntuación&quot;,&quot;msgAuthor&quot;:&quot;Autoría&quot;,&quot;msgOnlySaveAuto&quot;:&quot;Su puntuación se guardará después de cada pregunta. Solo puede jugar una vez.&quot;,&quot;msgSaveAuto&quot;:&quot;Su puntuación se guardará automáticamente después de cada pregunta.&quot;,&quot;msgSeveralScore&quot;:&quot;Puede guardar la puntuación tantas veces como quiera&quot;,&quot;msgYouLastScore&quot;:&quot;La última puntuación guardada es&quot;,&quot;msgActityComply&quot;:&quot;Ya ha realizado esta actividad.&quot;,&quot;msgPlaySeveralTimes&quot;:&quot;Puede realizar esta actividad cuantas veces quiera&quot;,&quot;msgUncompletedActivity&quot;:&quot;Actividad no completada&quot;,&quot;msgSuccessfulActivity&quot;:&quot;Actividad superada. Puntuación: %s&quot;,&quot;msgUnsuccessfulActivity&quot;:&quot;Actividad no superada. Puntuación: %s&quot;,&quot;msgTypeGame&quot;:&quot;Verdadero o falso&quot;,&quot;msgFeedback&quot;:&quot;Retroalimentación&quot;,&quot;msgSuggestion&quot;:&quot;Sugerencia&quot;,&quot;msgSolution&quot;:&quot;Solución&quot;,&quot;msgQuestion&quot;:&quot;Pregunta&quot;,&quot;msgTrue&quot;:&quot;Verdadero&quot;,&quot;msgFalse&quot;:&quot;Falso&quot;,&quot;msgOk&quot;:&quot;Correcto&quot;,&quot;msgKO&quot;:&quot;Incorrecto&quot;,&quot;msgShow&quot;:&quot;Mostrar&quot;,&quot;msgHide&quot;:&quot;Ocultar&quot;,&quot;msgCheck&quot;:&quot;Comprobar&quot;,&quot;msgReboot&quot;:&quot;¡Prueba otra vez!&quot;,&quot;msgScore&quot;:&quot;Puntuación&quot;,&quot;msgWeight&quot;:&quot;Peso&quot;,&quot;msgNext&quot;:&quot;Siguiente&quot;,&quot;msgPrevious&quot;:&quot;Anterior&quot;},&quot;questionsRandom&quot;:false,&quot;percentageQuestions&quot;:100,&quot;isTest&quot;:false,&quot;time&quot;:0,&quot;questionsGame&quot;:[{&quot;question&quot;:&quot;&lt;p&gt;Un metadato es un dato que está mal.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;«Meta» significa «sobre». Es información acerca de un dato.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&lt;p&gt;Piensa en la fecha de una foto: ¿siempre es incorrecta?&lt;/p&gt;&quot;,&quot;solution&quot;:0},{&quot;question&quot;:&quot;&lt;p&gt;Una foto puede revelar dónde se hizo aunque en la imagen no se vea ninguna dirección.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Si el GPS estaba activado, las coordenadas viajan dentro del archivo.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&lt;p&gt;¿Qué guarda el móvil además de los píxeles?&lt;/p&gt;&quot;,&quot;solution&quot;:1},{&quot;question&quot;:&quot;&lt;p&gt;Borrar una foto de una red social borra también todas sus copias.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Una vez publicada, puede haber copias y capturas fuera de tu control.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&lt;p&gt;Piensa en cuánta gente pudo descargarla.&lt;/p&gt;&quot;,&quot;solution&quot;:0},{&quot;question&quot;:&quot;&lt;p&gt;El scraping consiste en borrar contenido de páginas web.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Es lo contrario: recogerlo de forma automática y masiva.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&lt;p&gt;«Raspar» aquí es extraer, no eliminar.&lt;/p&gt;&quot;,&quot;solution&quot;:0},{&quot;question&quot;:&quot;&lt;p&gt;El archivo robots.txt impide técnicamente que un programa copie una web.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Es una petición, no una barrera. Funciona solo si las empresas serias deciden respetarla.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&lt;p&gt;¿Qué pasaría si alguien decide ignorarlo?&lt;/p&gt;&quot;,&quot;solution&quot;:0},{&quot;question&quot;:&quot;&lt;p&gt;En España, con 14 años ya puedes consentir tú el tratamiento de tus datos personales.&lt;/p&gt;&quot;,&quot;feedback&quot;:&quot;&lt;p&gt;Por debajo de esa edad tiene que autorizarlo tu familia o tutela.&lt;/p&gt;&quot;,&quot;suggestion&quot;:&quot;&lt;p&gt;Es la edad de consentimiento digital fijada por la ley de protección de datos.&lt;/p&gt;&quot;,&quot;solution&quot;:1}],&quot;isScorm&quot;:0,&quot;textButtonScorm&quot;:&quot;Guardar la puntuación&quot;,&quot;repeatActivity&quot;:true,&quot;weighted&quot;:100,&quot;evaluation&quot;:false,&quot;evaluationID&quot;:&quot;&quot;,&quot;showSlider&quot;:false,&quot;ideviceId&quot;:&quot;idevice-1785313017315-5i36ev3um&quot;}" data-idevice-template="trueorfalse.html">
+<div class="exe-trueorfalse-container">
+  
+    <div class="game-evaluation-ids js-hidden" data-id="idevice-1785313017315-5i36ev3um" data-evaluationb="false" data-evaluationid=""></div>
+        <div class="TOFP-instructions"><p>Responde todas las preguntas del cuestionario.</p></div>
+        <div class="TOFP-MainContainer" data-instance="idevice-1785313017315-5i36ev3um" id="tofPMainContainer-idevice-1785313017315-5i36ev3um">
+            <div class="TOFP-GameContainer" id="tofPGameContainer-idevice-1785313017315-5i36ev3um">
+                <div class="TOFP-GameScoreBoard TOFP-EHidden">
+                    <div class="TOFP-TimeNumber">
+                        <strong><span class="sr-av">Tiempo por pregunta:</span></strong>
+                        <p id="tofPPTime-idevice-1785313017315-5i36ev3um" class="TOFP-PTime">00:00:</p>
+                    </div>
+                </div>
+                <div class="TOFP-MessgeDiv" id="tofPMessageDiv-idevice-1785313017315-5i36ev3um">
+                    <div class="TOFP-Message" id="tofPMessage-idevice-1785313017315-5i36ev3um"></div>
+                </div>
+                <div class="TOFP-StartGameDiv TOFP-EHidden" id="tofPStartGameDiv-idevice-1785313017315-5i36ev3um">
+                    <button  id="tofPStartGame-idevice-1785313017315-5i36ev3um" type="button" class="btn btn-primary">Pulsa aquí para empezar</button>
+                </div>
+                <div class="TOFP-Multimedia " id="tofPMultimedia-idevice-1785313017315-5i36ev3um">
+                </div>
+                <div class="TOFP-CheckTestDiv TOFP-EHidden" id="tofPCheckTestDiv-idevice-1785313017315-5i36ev3um">
+                    <button id="tofPCheckTest-idevice-1785313017315-5i36ev3um" type="button" class="btn btn-primary">Comprobar</button>
+                    <button id="tofRebootTest-idevice-1785313017315-5i36ev3um" type="button" class="btn btn-primary TOFP-EHidden">¡Prueba otra vez!</button>
+                </div>
+        </div> 
+        <div class="Games-BottonContainer">
+            <div class="Games-GetScore">
+                <input id="tofPSendScore-idevice-1785313017315-5i36ev3um" type="button" value="Guardar la puntuación" class="feedbackbutton Games-SendScore" style="display:none"/> <span class="Games-RepeatActivity"></span>
+            </div>
+        </div>
+        <div class="TOFP-After"></div>
+        <div class="questionsMedia" style="display:none"></div>
+</div>
+
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s1-la-ia-que-ya-usas.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s3-como-aprende-a-ver.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class=""> <p> <span class="license-label">Licencia: </span><span class="license">creative commons: attribution - non commercial - share alike</span></p>
+</div>
+</div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>
